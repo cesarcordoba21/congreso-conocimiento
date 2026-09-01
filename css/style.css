@@ -1,15 +1,29 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
 html {
     scroll-behavior: smooth;
 }
 
-section {
-    scroll-margin-top: 90px;
+* {
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
+    color: #111;
 }
+
+section {
+    scroll-margin-top: 70px;
+}
+
+
+/* =========================================
+   HEADER / NAVBAR
+========================================= */
 
 header {
     background-color: #111;
@@ -17,6 +31,7 @@ header {
 
     position: sticky;
     top: 0;
+
     z-index: 1000;
 }
 
@@ -29,12 +44,12 @@ nav {
 .logo {
     color: white;
     font-size: 24px;
-    font-weight: bold;
-
+    font-weight: 700;
 }
 
 .menu {
     display: flex;
+    align-items: center;
     gap: 30px;
 }
 
@@ -45,32 +60,64 @@ nav {
 }
 
 .menu a:hover {
-    color: gray;
+    color: #aaa;
+}
+
+.menu a.active {
+    color: #aaa;
 }
 
 .menu .boton-registro {
     background-color: white;
-    color: black;
+    color: #111;
+
     padding: 10px 20px;
     border-radius: 5px;
 }
 
 .menu .boton-registro:hover {
     background-color: #ddd;
+    color: #111;
 }
 
-/*hero*/
+.menu .boton-registro.active {
+    background-color: #ddd;
+    color: #111;
+}
+
+.menu-toggle {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: white;
+    font-size: 28px;
+
+    cursor: pointer;
+    padding: 0;
+}
+
+
+/* =========================================
+   HERO INICIO
+========================================= */
+
 .hero {
     min-height: 80vh;
+
     background-image:
-    linear-gradient(
-        rgba(0, 0, 0, 0.55),
-        rgba(0, 0, 0, 0.55)
-    ),
-    url("../images/hero.jpg");
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../images/hero.jpg");
+
     background-size: cover;
     background-position: center;
+
     padding: 80px 50px;
+
     color: white;
 
     display: flex;
@@ -81,6 +128,7 @@ nav {
 .hero-fecha {
     font-size: 13px;
     font-weight: 600;
+
     letter-spacing: 3px;
     text-transform: uppercase;
 }
@@ -88,9 +136,11 @@ nav {
 .hero h1 {
     font-size: 72px;
     line-height: 0.95;
+
     margin: 20px 0;
 
     font-weight: 800;
+
     text-transform: uppercase;
     letter-spacing: -3px;
 }
@@ -98,7 +148,9 @@ nav {
 .hero-description {
     font-size: 20px;
     margin-bottom: 40px;
+
     max-width: 500px;
+
     line-height: 1.5;
 }
 
@@ -107,9 +159,9 @@ nav {
 
     background-color: white;
     color: #111;
-    
+
     text-decoration: none;
-    
+
     padding: 16px 28px;
 
     border-radius: 4px;
@@ -127,16 +179,10 @@ nav {
     background-color: #ddd;
 }
 
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
-}
 
-/* SOBRE EL CONGRESO */
+/* =========================================
+   SOBRE EL CONGRESO
+========================================= */
 
 .sobre {
     padding: 120px 50px;
@@ -145,22 +191,29 @@ nav {
 .sobre-etiqueta {
     font-size: 13px;
     font-weight: 700;
+
     letter-spacing: 3px;
+
     margin-bottom: 50px;
 }
 
 .sobre-contenido {
     display: grid;
     grid-template-columns: 2fr 1fr;
+
     gap: 80px;
+
     align-items: end;
 }
 
 .sobre h2 {
     font-size: 64px;
     line-height: 0.95;
+
     letter-spacing: -3px;
+
     text-transform: uppercase;
+
     margin: 0;
 }
 
@@ -168,6 +221,11 @@ nav {
     font-size: 18px;
     line-height: 1.6;
 }
+
+
+/* =========================================
+   ESTADÍSTICAS
+========================================= */
 
 .estadisticas {
     display: grid;
@@ -190,15 +248,21 @@ nav {
 .estadistica p {
     font-size: 13px;
     font-weight: 600;
+
     letter-spacing: 2px;
+
     text-transform: uppercase;
 }
 
-/* SPEAKERS */
+
+/* =========================================
+   PONENTES
+========================================= */
 
 .speakers {
     background-color: #111;
     color: white;
+
     padding: 120px 50px;
 }
 
@@ -206,27 +270,35 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: end;
+
     margin-bottom: 60px;
 }
 
 .section-label {
     font-size: 13px;
     font-weight: 700;
+
     letter-spacing: 3px;
+
     margin-bottom: 30px;
 }
 
 .speakers h2 {
     font-size: 56px;
     line-height: 1;
+
     letter-spacing: -3px;
+
     text-transform: uppercase;
+
     margin: 0;
 }
 
 .speakers-link {
     color: white;
+
     text-decoration: none;
+
     font-size: 14px;
     font-weight: 600;
 }
@@ -234,39 +306,27 @@ nav {
 .speakers-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
+}
+
+.speaker-card {
+    width: 100%;
 }
 
 .speaker-image {
     height: 500px;
+
     overflow: hidden;
 }
 
 .speaker-image img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
-}
 
-.speaker-info {
-    padding-top: 20px;
-}
-
-.speaker-info h3 {
-    font-size: 22px;
-    margin: 0 0 8px 0;
-}
-
-.speaker-info p {
-    color: #aaa;
-    margin: 0;
-    font-size: 14px;
-}
-
-.speaker-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: block;
 
     transition: transform 0.5s;
 }
@@ -275,38 +335,125 @@ nav {
     transform: scale(1.05);
 }
 
-/* PROGRAM */
+.speaker-info {
+    padding-top: 20px;
+}
+
+.speaker-info h3 {
+    font-size: 22px;
+
+    margin: 0 0 8px;
+}
+
+.speaker-info p {
+    color: #aaa;
+
+    margin: 0;
+
+    font-size: 14px;
+}
+
+.speaker-link {
+    color: inherit;
+    text-decoration: none;
+
+    display: block;
+}
+
+.speaker-link .speaker-card {
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HERO PÁGINAS INTERNAS
+========================================= */
+
+.page-hero {
+    min-height: 55vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 80px 50px;
+
+    background-color: #f2f2f2;
+}
+
+.page-hero h1 {
+    font-size: 72px;
+    line-height: 0.95;
+
+    text-transform: uppercase;
+
+    letter-spacing: -4px;
+
+    margin: 20px 0 0;
+
+    max-width: 1100px;
+}
+
+
+/* =========================================
+   PÁGINA DE PONENTES
+========================================= */
+
+.speakers-page {
+    padding-top: 80px;
+}
+
+.speakers-page .speakers-grid {
+    grid-template-columns: repeat(3, 1fr);
+
+    row-gap: 70px;
+}
+
+
+/* =========================================
+   PROGRAMA
+========================================= */
 
 .program {
     padding: 120px 50px;
+
     background-color: #f2f2f2;
 }
 
 .program-header h2 {
     font-size: 56px;
     line-height: 1;
+
     letter-spacing: -3px;
+
     text-transform: uppercase;
+
     margin: 0;
 }
 
 .program-filters {
     display: flex;
+
     gap: 10px;
+
     margin: 60px 0 40px;
 }
 
 .filter-button {
     background: transparent;
     color: #111;
+
     border: 1px solid #111;
+
     padding: 12px 20px;
 
     font-family: inherit;
     font-weight: 600;
+
     text-transform: uppercase;
 
     cursor: pointer;
+
     transition: 0.3s;
 }
 
@@ -318,6 +465,7 @@ nav {
 
 .program-item {
     display: grid;
+
     grid-template-columns: 150px 1fr 50px;
 
     align-items: center;
@@ -325,6 +473,8 @@ nav {
     padding: 35px 0;
 
     border-top: 1px solid #bbb;
+
+    scroll-margin-top: 100px;
 }
 
 .program-time {
@@ -334,100 +484,118 @@ nav {
 
 .program-info h3 {
     font-size: 24px;
+
     margin: 0 0 8px;
 }
 
 .program-info p {
     margin: 0;
+
     color: #666;
 }
 
 .program-number {
     text-align: right;
+
     font-size: 13px;
+
     color: #777;
 }
 
-.program {
-    padding: 80px 20px;
+.program-link {
+    display: inline-block;
+
+    margin-top: 40px;
+
+    color: #111;
 }
 
-.program-header h2 {
-    font-size: 40px;
-    letter-spacing: -2px;
+
+/* ENLACE DEL PONENTE EN EL PROGRAMA */
+
+.program-speaker-link {
+    color: inherit;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
 }
 
-.program-filters {
-    overflow-x: auto;
+.program-speaker-link:hover {
+    color: #111;
+
+    text-decoration: underline;
 }
 
-.filter-button {
-    flex-shrink: 0;
-}
 
-.program-item {
-    grid-template-columns: 70px 1fr;
-    gap: 15px;
-}
-
-.program-number {
-    display: none;
-}
-
-.program-info h3 {
-    font-size: 19px;
-}
-
-/* REGISTRATION */
+/* =========================================
+   REGISTRO
+========================================= */
 
 .registration {
     background-color: #111;
     color: white;
+
     padding: 120px 50px;
 }
 
 .registration-content {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 100px;
 }
 
 .registration h2 {
     font-size: 64px;
     line-height: 0.95;
+
     letter-spacing: -3px;
+
     text-transform: uppercase;
+
     margin: 0 0 30px;
 }
 
 .registration-text > p:last-child {
     max-width: 500px;
+
     line-height: 1.6;
+
     color: #bbb;
 }
 
 .registration-form {
     display: flex;
     flex-direction: column;
+
     gap: 30px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
+
     gap: 10px;
 }
 
 .form-group label {
     font-size: 13px;
     font-weight: 600;
+
     text-transform: uppercase;
+
     letter-spacing: 1px;
 }
 
 .form-group input {
     background: transparent;
+
     border: none;
+
     border-bottom: 1px solid #666;
 
     color: white;
@@ -456,6 +624,7 @@ nav {
     font-weight: 700;
 
     text-transform: uppercase;
+
     letter-spacing: 1px;
 
     cursor: pointer;
@@ -467,16 +636,221 @@ nav {
     background-color: #ddd;
 }
 
+.registration-link {
+    display: inline-block;
+
+    text-decoration: none;
+}
+
+.registration-action {
+    display: flex;
+
+    align-items: center;
+}
+
+.registration-page {
+    min-height: 60vh;
+}
+
 .form-message {
     min-height: 20px;
+
     margin: 0;
+
     font-size: 14px;
 }
 
-/* FOOTER */
+
+/* =========================================
+   PERFIL DEL PONENTE
+========================================= */
+
+.speaker-profile {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: calc(100vh - 80px);
+
+    background-color: #f2f2f2;
+}
+
+
+/* FOTO */
+
+.speaker-profile-image {
+    height: calc(100vh - 80px);
+
+    min-height: 650px;
+
+    overflow: hidden;
+}
+
+.speaker-profile-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /*
+       Esto hace que se priorice la parte
+       superior de la fotografía.
+    */
+    object-position: center top;
+
+    display: block;
+}
+
+
+/* INFORMACIÓN */
+
+.speaker-profile-content {
+    padding: 80px 70px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.speaker-profile-content .section-label {
+    margin: 0 0 20px;
+}
+
+.speaker-profile-content h1 {
+    font-size: clamp(55px, 6vw, 90px);
+
+    line-height: 0.88;
+
+    letter-spacing: -5px;
+
+    text-transform: uppercase;
+
+    margin: 0 0 30px;
+}
+
+.speaker-specialty {
+    font-size: 18px;
+    font-weight: 600;
+
+    margin: 0 0 50px;
+}
+
+.speaker-biography {
+    max-width: 600px;
+}
+
+.speaker-biography p {
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #555;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   CONFERENCIA DEL PONENTE
+========================================= */
+
+.speaker-conference {
+    background-color: #111;
+    color: white;
+
+    padding: 120px 50px;
+}
+
+.conference-content {
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr;
+
+    gap: 100px;
+
+    align-items: end;
+}
+
+.conference-content h2 {
+    font-size: 64px;
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    text-transform: uppercase;
+
+    margin: 0;
+}
+
+.conference-details {
+    display: grid;
+
+    gap: 30px;
+}
+
+.conference-details div {
+    border-top: 1px solid #444;
+
+    padding-top: 20px;
+}
+
+.conference-details span {
+    color: #888;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.conference-details p {
+    font-size: 18px;
+
+    margin: 8px 0 0;
+}
+
+
+/* =========================================
+   NAVEGACIÓN PERFIL
+========================================= */
+
+.speaker-back {
+    padding: 50px;
+
+    background-color: #f2f2f2;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.speaker-back a {
+    color: #111;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.speaker-back a:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
 
 .footer {
     background-color: #080808;
+
     color: white;
 
     padding: 80px 50px 30px;
@@ -484,6 +858,7 @@ nav {
 
 .footer-top {
     display: flex;
+
     justify-content: space-between;
 
     gap: 80px;
@@ -493,22 +868,26 @@ nav {
 
 .footer-brand h2 {
     font-size: 32px;
+
     margin: 0 0 15px;
 }
 
 .footer-brand p {
     color: #888;
+
     margin: 0;
 }
 
 .footer-links {
     display: flex;
+
     gap: 100px;
 }
 
 .footer-links > div {
     display: flex;
     flex-direction: column;
+
     gap: 12px;
 }
 
@@ -539,6 +918,7 @@ nav {
 
 .footer-bottom {
     display: flex;
+
     justify-content: space-between;
 
     border-top: 1px solid #333;
@@ -550,140 +930,1490 @@ nav {
     font-size: 12px;
 }
 
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
 .reveal {
     opacity: 0;
+
     transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
 }
 
 .reveal.visible {
     opacity: 1;
+
     transform: translateY(0);
 }
 
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) and (min-width: 769px) {
+
+    .speaker-profile-content {
+        padding: 60px 40px;
+    }
+
+    .speaker-profile-content h1 {
+        font-size: 55px;
+
+        letter-spacing: -3px;
+    }
+
+    .conference-content {
+        gap: 50px;
+    }
+
+    .conference-content h2 {
+        font-size: 48px;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
 @media (max-width: 768px) {
 
+
+    /* HEADER */
+
     header {
-        padding: 20px;
+        padding: 16px 20px;
     }
 
-    .menu {
-        gap: 15px;
+    nav {
+        width: 100%;
     }
 
-    .hero {
-        padding: 60px 20px;
-    }
+    .logo {
+        font-size: 14px;
 
-    .hero h1 {
-        font-size: 46px;
-        letter-spacing: -2px;
+        position: relative;
+
+        z-index: 1002;
     }
 
     .menu-toggle {
         display: block;
+
+        position: relative;
+
+        z-index: 1002;
+
+        background: none;
+
+        border: none;
+
+        color: white;
+
+        font-size: 24px;
+
+        cursor: pointer;
     }
+
+
+    /* MENÚ CERRADO */
 
     .menu {
         display: none;
     }
 
-    .menu.activo {
-    display: flex;
-    position: absolute;
-    top: 75px;
-    left: 0;
-    width: 100%;
 
-    flex-direction: column;
+    /* MENÚ ABIERTO */
+
+    .menu.activo {
+        display: flex;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        background-color: #111;
+
+        padding: 15px 20px 25px;
+
+        box-shadow:
+            0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .menu.activo a {
+        display: block;
+
+        width: 100%;
+
+        padding: 16px 0;
+
+        border-bottom: 1px solid #333;
+
+        font-size: 15px;
+    }
+
+    .menu.activo a.active {
+        color: #aaa;
+    }
+
+    .menu.activo .boton-registro {
+        width: 100%;
+
+        margin-top: 15px;
+
+        padding: 14px 16px;
+
+        text-align: center;
+
+        border-bottom: none;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 75vh;
+
+        padding: 60px 20px;
+
+        background-position: center;
+    }
+
+    .hero-fecha {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+
+        line-height: 0.95;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+
+        line-height: 1.5;
+    }
+
+
+    /* SOBRE */
+
+    .sobre {
+        padding: 80px 20px;
+    }
+
+    .sobre-etiqueta {
+        margin-bottom: 30px;
+    }
+
+    .sobre-contenido {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .sobre h2 {
+        font-size: 38px;
+
+        line-height: 1;
+
+        letter-spacing: -2px;
+    }
+
+    .sobre-texto {
+        font-size: 16px;
+    }
+
+
+    /* ESTADÍSTICAS */
+
+    .estadisticas {
+        grid-template-columns: 1fr;
+
+        margin-top: 60px;
+    }
+
+    .estadistica {
+        border-bottom: 1px solid #ccc;
+    }
+
+
+    /* PONENTES */
+
+    .speakers {
+        padding: 70px 20px;
+    }
+
+    .speakers-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
+
+        margin-bottom: 40px;
+    }
+
+    .speakers h2 {
+        font-size: 38px;
+
+        line-height: 1;
+
+        letter-spacing: -2px;
+    }
+
+    .speakers-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .speaker-image {
+        height: 450px;
+    }
+
+    .speaker-info h3 {
+        font-size: 20px;
+    }
+
+
+    /* HERO PÁGINAS */
+
+    .page-hero {
+        min-height: auto;
+
+        padding: 55px 20px 50px;
+
+        justify-content: flex-start;
+    }
+
+    .page-hero .section-label {
+        margin: 0 0 20px;
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+    .page-hero h1 {
+        font-size: 34px;
+
+        line-height: 1.02;
+
+        letter-spacing: -1.5px;
+
+        margin: 0;
+
+        max-width: 100%;
+    }
+
+
+    /* PROGRAMA */
+
+    .program {
+        padding: 60px 20px;
+    }
+
+    .program-header h2 {
+        font-size: 34px;
+
+        line-height: 1.05;
+
+        letter-spacing: -1.5px;
+    }
+
+    .program-filters {
+        margin: 35px 0 30px;
+
+        overflow-x: auto;
+
+        gap: 8px;
+
+        padding-bottom: 5px;
+    }
+
+    .filter-button {
+        flex-shrink: 0;
+
+        padding: 10px 16px;
+
+        font-size: 12px;
+    }
+
+    .program-item {
+        grid-template-columns: 60px 1fr;
+
+        gap: 12px;
+
+        padding: 25px 0;
+    }
+
+    .program-time {
+        font-size: 13px;
+    }
+
+    .program-info h3 {
+        font-size: 18px;
+
+        line-height: 1.2;
+    }
+
+    .program-info p {
+        font-size: 13px;
+
+        line-height: 1.4;
+    }
+
+    .program-number {
+        display: none;
+    }
+
+
+    /* PÁGINA PONENTES */
+
+    .speakers-page {
+        padding-top: 60px;
+    }
+
+    .speakers-page .speakers-grid {
+        grid-template-columns: 1fr;
+
+        row-gap: 50px;
+    }
+
+
+    /* REGISTRO */
+
+    .registration {
+        padding: 70px 20px;
+    }
+
+    .registration-content {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .registration h2 {
+        font-size: 38px;
+
+        line-height: 1;
+
+        letter-spacing: -2px;
+    }
+
+    .registration-form {
+        gap: 25px;
+    }
+
+
+    /* =====================================
+       PERFIL PONENTE EN CELULAR
+    ===================================== */
+
+    .speaker-profile {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+    }
+
+    .speaker-profile-image {
+        height: 500px;
+
+        min-height: 0;
+    }
+
+    .speaker-profile-image img {
+        object-position: center top;
+    }
+
+    .speaker-profile-content {
+        padding: 60px 20px;
+    }
+
+    .speaker-profile-content h1 {
+        font-size: 52px;
+
+        line-height: 0.9;
+
+        letter-spacing: -3px;
+
+        margin: 0 0 25px;
+    }
+
+    .speaker-specialty {
+        font-size: 16px;
+
+        margin-bottom: 35px;
+    }
+
+    .speaker-biography p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* CONFERENCIA */
+
+    .speaker-conference {
+        padding: 70px 20px;
+    }
+
+    .conference-content {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .conference-content h2 {
+        font-size: 38px;
+
+        line-height: 1;
+
+        letter-spacing: -2px;
+    }
+
+    .conference-details {
+        gap: 25px;
+    }
+
+
+    /* NAVEGACIÓN PERFIL */
+
+    .speaker-back {
+        padding: 40px 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 60px 20px 30px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+
+        gap: 50px;
+
+        padding-bottom: 50px;
+    }
+
+    .footer-links {
+        gap: 50px;
+
+        flex-wrap: wrap;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES PEQUEÑOS
+========================================= */
+
+@media (max-width: 420px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .page-hero h1 {
+        font-size: 31px;
+    }
+
+    .program-header h2 {
+        font-size: 31px;
+    }
+
+    .speaker-image {
+        height: 400px;
+    }
+
+    .registration h2 {
+        font-size: 34px;
+    }
+
+    .speaker-profile-image {
+        height: 420px;
+    }
+
+    .speaker-profile-content h1 {
+        font-size: 46px;
+    }
+
+}
+
+/* =========================================
+   BOTÓN AGREGAR A MI AGENDA
+========================================= */
+
+.agenda-add-button {
+    margin-top: 18px;
+
+    padding: 10px 15px;
+
+    background: transparent;
+    color: #111;
+
+    border: 1px solid #111;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.agenda-add-button:hover {
+    background: #111;
+    color: white;
+}
+
+.agenda-add-button.added {
+    background: #111;
+    color: white;
+}
+
+
+/* =========================================
+   CONTADOR DEL MENÚ
+========================================= */
+
+.agenda-count {
+    display: inline-flex;
+
+    justify-content: center;
     align-items: center;
 
-    background-color: #111;
+    min-width: 20px;
+    height: 20px;
 
-    padding: 30px 0;
+    margin-left: 5px;
+
+    padding: 0 5px;
+
+    background: white;
+    color: #111;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 800;
 }
 
-.sobre {
-    padding: 80px 20px;
+
+/* =========================================
+   PÁGINA MI AGENDA
+========================================= */
+
+.my-agenda {
+    padding: 120px 50px;
+
+    background: #f2f2f2;
+
+    min-height: 600px;
 }
 
-.sobre-contenido {
-    grid-template-columns: 1fr;
+.my-agenda-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
     gap: 40px;
+
+    margin-bottom: 70px;
 }
 
-.sobre h2 {
-    font-size: 42px;
-    letter-spacing: -2px;
+.my-agenda-header h2 {
+    margin: 0;
+
+    font-size: 56px;
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    text-transform: uppercase;
 }
 
-.estadisticas {
-    grid-template-columns: 1fr;
-    margin-top: 60px;
+.agenda-program-link {
+    color: #111;
+
+    text-decoration: none;
+
+    font-weight: 600;
 }
 
-.estadistica {
-    border-bottom: 1px solid #ccc;
+.agenda-program-link:hover {
+    text-decoration: underline;
 }
 
-.speakers {
-    padding: 80px 20px;
+
+/* =========================================
+   CONFERENCIA GUARDADA
+========================================= */
+
+.agenda-list {
+    border-bottom: 1px solid #bbb;
 }
 
-.speakers-header {
-    flex-direction: column;
-    align-items: flex-start;
+.agenda-item {
+    display: grid;
+
+    grid-template-columns:
+        70px
+        170px
+        1fr
+        150px;
+
     gap: 30px;
+
+    align-items: center;
+
+    padding: 35px 0;
+
+    border-top: 1px solid #bbb;
 }
 
-.speakers h2 {
-    font-size: 40px;
-    letter-spacing: -2px;
+.agenda-item-number {
+    color: #888;
+
+    font-size: 12px;
 }
 
-.speakers-grid {
-    grid-template-columns: 1fr;
+.agenda-item-date {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
 }
 
-.speaker-image {
-    height: 450px;
+.agenda-item-date span {
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
 }
 
-.registration {
-    padding: 80px 20px;
+.agenda-item-date strong {
+    font-size: 22px;
 }
 
-.registration-content {
-    grid-template-columns: 1fr;
-    gap: 60px;
+.agenda-item-info h3 {
+    margin: 0 0 8px;
+
+    font-size: 23px;
 }
 
-.registration h2 {
+.agenda-item-info p {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 14px;
+}
+
+.agenda-item-info a {
+    color: inherit;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.agenda-item-info a:hover {
+    color: #111;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   ACCIONES AGENDA
+========================================= */
+
+.agenda-item-actions {
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.agenda-view-link {
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.agenda-view-link:hover {
+    text-decoration: underline;
+}
+
+.agenda-remove-button {
+    padding: 9px 12px;
+
+    background: transparent;
+    color: #777;
+
+    border: 1px solid #bbb;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.agenda-remove-button:hover {
+    background: #111;
+
+    border-color: #111;
+
+    color: white;
+}
+
+
+/* =========================================
+   AGENDA VACÍA
+========================================= */
+
+.agenda-empty {
+    padding: 80px 0;
+
+    border-top: 1px solid #bbb;
+}
+
+.agenda-empty-number {
+    color: #999;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.agenda-empty h3 {
+    margin: 15px 0;
+
+    font-size: 36px;
+
+    letter-spacing: -1px;
+}
+
+.agenda-empty > p:not(.agenda-empty-number) {
+    max-width: 500px;
+
+    color: #666;
+
+    line-height: 1.6;
+}
+
+.agenda-empty-button {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 14px 22px;
+
+    background: #111;
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   MI AGENDA - CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .my-agenda {
+        padding: 70px 20px;
+    }
+
+    .my-agenda-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-bottom: 50px;
+    }
+
+    .my-agenda-header h2 {
+        font-size: 38px;
+
+        letter-spacing: -2px;
+    }
+
+    .agenda-item {
+        grid-template-columns:
+            40px
+            1fr;
+
+        gap: 20px;
+
+        align-items: start;
+    }
+
+    .agenda-item-number {
+        grid-row: 1 / 4;
+    }
+
+    .agenda-item-date {
+        grid-column: 2;
+    }
+
+    .agenda-item-info {
+        grid-column: 2;
+    }
+
+    .agenda-item-info h3 {
+        font-size: 19px;
+    }
+
+    .agenda-item-actions {
+        grid-column: 2;
+
+        justify-content: flex-start;
+
+        margin-top: 10px;
+    }
+
+    .agenda-empty {
+        padding: 60px 0;
+    }
+
+    .agenda-empty h3 {
+        font-size: 28px;
+    }
+
+}
+
+/* =========================================
+   PASE DIGITAL
+========================================= */
+
+.pass-section {
+    min-height: calc(100vh - 80px);
+
+    padding: 100px 50px;
+
+    background: #f2f2f2;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+/* INTRO */
+
+.pass-intro h1 {
+    margin: 20px 0 30px;
+
+    font-size: 72px;
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    text-transform: uppercase;
+}
+
+.pass-intro > p:not(.section-label) {
+    max-width: 430px;
+
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+.pass-agenda-link {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+.pass-agenda-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   TARJETA
+========================================= */
+
+.digital-pass {
+    width: 100%;
+
+    max-width: 700px;
+
+    margin-left: auto;
+
+    background: #111;
+
+    color: white;
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.15);
+}
+
+
+/* PARTE SUPERIOR */
+
+.pass-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 25px 30px;
+
+    border-bottom: 1px solid #333;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* INFORMACIÓN PRINCIPAL */
+
+.pass-main {
+    padding: 60px 40px;
+}
+
+.pass-label {
+    margin: 0 0 15px;
+
+    color: #777;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.pass-main h2 {
+    margin: 0 0 20px;
+
+    font-size: 52px;
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    text-transform: uppercase;
+}
+
+.pass-organization {
+    margin: 0 0 8px;
+
+    color: #ccc;
+
+    font-size: 17px;
+}
+
+.pass-position {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* FECHA Y SEDE */
+
+.pass-information {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    border-top: 1px solid #333;
+
+    border-bottom: 1px solid #333;
+}
+
+.pass-information > div {
+    padding: 25px 30px;
+}
+
+.pass-information > div:first-child {
+    border-right: 1px solid #333;
+}
+
+.pass-information span,
+.pass-bottom span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #777;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.pass-information strong,
+.pass-bottom strong {
+    font-size: 13px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* PARTE INFERIOR */
+
+.pass-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* =========================================
+   QR VISUAL
+========================================= */
+
+.pass-qr {
+    width: 90px;
+
+    height: 90px;
+
+    padding: 8px;
+
+    background: white;
+}
+
+.qr-pattern {
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            #111 0px,
+            #111 5px,
+            transparent 5px,
+            transparent 10px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            #111 0px,
+            #111 5px,
+            transparent 5px,
+            transparent 10px
+        );
+
+    background-blend-mode: multiply;
+}
+
+
+/* =========================================
+   SIN REGISTRO
+========================================= */
+
+.pass-no-registration {
+    display: none;
+
+    padding: 60px;
+
+    background: #111;
+
+    color: white;
+}
+
+.pass-no-registration h2 {
+    margin: 15px 0;
+
     font-size: 42px;
+
+    line-height: 1;
+
     letter-spacing: -2px;
 }
 
-.footer {
-    padding: 60px 20px 30px;
+.pass-no-registration > p:not(.section-label) {
+    color: #aaa;
+
+    line-height: 1.6;
 }
 
-.footer-top {
-    flex-direction: column;
+.pass-no-registration a {
+    display: inline-block;
 
-    gap: 50px;
+    margin-top: 25px;
 
-    padding-bottom: 50px;
+    padding: 14px 20px;
+
+    background: white;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
 }
 
-.footer-links {
-    gap: 50px;
+
+/* =========================================
+   PASE - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .pass-section {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .digital-pass {
+        margin-left: 0;
+    }
+
 }
 
-.footer-bottom {
-    flex-direction: column;
-    gap: 5px;
-}
+
+/* =========================================
+   PASE - CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .pass-section {
+        padding: 70px 20px;
+
+        gap: 50px;
+    }
+
+    .pass-intro h1 {
+        font-size: 48px;
+
+        letter-spacing: -3px;
+    }
+
+    .pass-main {
+        padding: 45px 25px;
+    }
+
+    .pass-main h2 {
+        font-size: 38px;
+
+        letter-spacing: -2px;
+    }
+
+    .pass-information {
+        grid-template-columns: 1fr;
+    }
+
+    .pass-information > div:first-child {
+        border-right: none;
+
+        border-bottom: 1px solid #333;
+    }
+
+    .pass-bottom {
+        padding: 25px;
+    }
+
+    .pass-qr {
+        width: 75px;
+
+        height: 75px;
+    }
+
+    .pass-no-registration {
+        padding: 40px 25px;
+    }
+
+    .pass-no-registration h2 {
+        font-size: 32px;
+    }
 
 }
 
+/* =========================================
+   QR REAL
+========================================= */
 
+.pass-qr {
+    width: 126px;
+    height: 126px;
+
+    padding: 8px;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.pass-qr img,
+.pass-qr canvas {
+    display: block;
+
+    width: 110px !important;
+    height: 110px !important;
+}
+
+
+/* =========================================
+   BOTONES DEL PASE
+========================================= */
+
+.pass-actions {
+    grid-column: 2;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 15px;
+
+    margin-top: -60px;
+}
+
+.pass-action-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 22px;
+
+    border: 1px solid #111;
+
+    background: #111;
+    color: #fff;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.pass-action-button:hover {
+    background: #333;
+}
+
+.pass-action-secondary {
+    background: transparent;
+    color: #111;
+}
+
+.pass-action-secondary:hover {
+    background: #111;
+    color: #fff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .pass-actions {
+        grid-column: 1;
+
+        justify-content: flex-start;
+
+        margin-top: -30px;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .pass-actions {
+        flex-direction: column;
+
+        margin-top: -20px;
+    }
+
+    .pass-action-button {
+        width: 100%;
+    }
+
+    .pass-qr {
+        width: 96px;
+        height: 96px;
+    }
+
+    .pass-qr img,
+    .pass-qr canvas {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+}
+
+
+/* =========================================
+   IMPRIMIR / GUARDAR PDF
+========================================= */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+
+    body {
+        background: #fff !important;
+    }
+
+    header,
+    .pass-intro,
+    .pass-actions,
+    .pass-no-registration,
+    .footer {
+        display: none !important;
+    }
+
+    main {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .pass-section {
+        display: block !important;
+
+        min-height: auto !important;
+
+        padding: 0 !important;
+
+        background: #fff !important;
+    }
+
+    .digital-pass {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 700px !important;
+
+        margin: 40px auto !important;
+
+        background: #111 !important;
+        color: #fff !important;
+
+        box-shadow: none !important;
+
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .pass-top,
+    .pass-main,
+    .pass-information,
+    .pass-bottom {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .pass-qr {
+        background: #fff !important;
+
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+}

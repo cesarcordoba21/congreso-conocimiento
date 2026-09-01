@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Programa | Congreso de Conocimiento</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                CONOCIMIENTO
+            </div>
+
+            <button class="menu-toggle" type="button">
+                ☰
+            </button>
+
+            <div class="menu">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <a href="programa.html" class="active">
+                    Programa
+                </a>
+
+                <a href="ponentes.html">
+                    Ponentes
+                </a>
+
+                <a href="agenda.html">
+                    Mi agenda
+                    <span class="agenda-count">0</span>
+                </a>
+
+                <a href="registro.html" class="boton-registro">
+                    Registro
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section class="page-hero">
+
+            <p class="section-label">
+                PROGRAMA 2026
+            </p>
+
+            <h1>
+                Tres días de ideas,<br>
+                innovación y aprendizaje.
+            </h1>
+
+        </section>
+
+
+        <!-- PROGRAMA -->
+
+        <section class="program">
+
+            <div class="program-header">
+
+                <p class="section-label">
+                    AGENDA
+                </p>
+
+                <h2>
+                    Programa del congreso
+                </h2>
+
+            </div>
+
+
+            <!-- FILTROS -->
+
+            <div class="program-filters">
+
+                <button
+                    class="filter-button active"
+                    type="button"
+                    data-day="all"
+                >
+                    Todos
+                </button>
+
+                <button
+                    class="filter-button"
+                    type="button"
+                    data-day="10"
+                >
+                    10 Septiembre
+                </button>
+
+                <button
+                    class="filter-button"
+                    type="button"
+                    data-day="11"
+                >
+                    11 Septiembre
+                </button>
+
+                <button
+                    class="filter-button"
+                    type="button"
+                    data-day="12"
+                >
+                    12 Septiembre
+                </button>
+
+            </div>
+
+
+            <!-- DANIEL -->
+
+            <div
+                class="program-item"
+                id="daniel-conference"
+                data-day="10"
+            >
+
+                <div class="program-time">
+                    11:30
+                </div>
+
+                <div class="program-info">
+
+                    <h3>
+                        Innovación que transforma industrias
+                    </h3>
+
+                    <p>
+
+                        <a
+                            href="ponente.html?id=daniel"
+                            class="program-speaker-link"
+                        >
+                            Daniel Torres
+                        </a>
+
+                        · Sala Innovación
+
+                    </p>
+
+                    <button
+                        class="agenda-add-button"
+                        type="button"
+                        data-conference="daniel"
+                    >
+                        + Agregar a mi agenda
+                    </button>
+
+                </div>
+
+                <div class="program-number">
+                    01
+                </div>
+
+            </div>
+
+
+            <!-- SOFÍA -->
+
+            <div
+                class="program-item"
+                id="sofia-conference"
+                data-day="10"
+            >
+
+                <div class="program-time">
+                    13:00
+                </div>
+
+                <div class="program-info">
+
+                    <h3>
+                        El futuro de la inteligencia artificial
+                    </h3>
+
+                    <p>
+
+                        <a
+                            href="ponente.html?id=sofia"
+                            class="program-speaker-link"
+                        >
+                            Sofía Ramírez
+                        </a>
+
+                        · Sala Futuro
+
+                    </p>
+
+                    <button
+                        class="agenda-add-button"
+                        type="button"
+                        data-conference="sofia"
+                    >
+                        + Agregar a mi agenda
+                    </button>
+
+
+                </div>
+
+                <div class="program-number">
+                    02
+                </div>
+
+            </div>
+
+
+            <!-- ANDREA -->
+
+            <div
+                class="program-item"
+                id="andrea-conference"
+                data-day="11"
+            >
+
+                <div class="program-time">
+                    10:00
+                </div>
+
+                <div class="program-info">
+
+                    <h3>
+                        De una idea a una empresa
+                    </h3>
+
+                    <p>
+
+                        <a
+                            href="ponente.html?id=andrea"
+                            class="program-speaker-link"
+                        >
+                            Andrea Vega
+                        </a>
+
+                        · Sala Emprendimiento
+
+                    </p>
+
+                    <button
+                        class="agenda-add-button"
+                        type="button"
+                        data-conference="andrea"
+                    >
+                        + Agregar a mi agenda
+                    </button>
+
+                </div>
+
+                <div class="program-number">
+                    03
+                </div>
+
+            </div>
+
+
+            <!-- CARLOS -->
+
+            <div
+                class="program-item"
+                id="carlos-conference"
+                data-day="11"
+            >
+
+                <div class="program-time">
+                    12:00
+                </div>
+
+                <div class="program-info">
+
+                    <h3>
+                        Transformar empresas en la era digital
+                    </h3>
+
+                    <p>
+
+                        <a
+                            href="ponente.html?id=carlos"
+                            class="program-speaker-link"
+                        >
+                            Carlos Mendoza
+                        </a>
+
+                        · Sala Tecnología
+
+                    </p>
+
+                    <button
+                        class="agenda-add-button"
+                        type="button"
+                        data-conference="carlos"
+                    >
+                        + Agregar a mi agenda
+                    </button>
+
+                </div>
+
+                <div class="program-number">
+                    04
+                </div>
+
+            </div>
+
+
+            <!-- MARIANA -->
+
+            <div
+                class="program-item"
+                id="mariana-conference"
+                data-day="12"
+            >
+
+                <div class="program-time">
+                    10:30
+                </div>
+
+                <div class="program-info">
+
+                    <h3>
+                        Liderazgo para tiempos de cambio
+                    </h3>
+
+                    <p>
+
+                        <a
+                            href="ponente.html?id=mariana"
+                            class="program-speaker-link"
+                        >
+                            Mariana López
+                        </a>
+
+                        · Sala Liderazgo
+
+                    </p>
+
+                    <button
+                        class="agenda-add-button"
+                        type="button"
+                        data-conference="mariana"
+                    >
+                        + Agregar a mi agenda
+                    </button>
+
+                </div>
+
+                <div class="program-number">
+                    05
+                </div>
+
+            </div>
+
+
+            <!-- VALERIA -->
+
+            <div
+                class="program-item"
+                id="valeria-conference"
+                data-day="12"
+            >
+
+                <div class="program-time">
+                    13:00
+                </div>
+
+                <div class="program-info">
+
+                    <h3>
+                        Creatividad que genera oportunidades
+                    </h3>
+
+                    <p>
+
+                        <a
+                            href="ponente.html?id=valeria"
+                            class="program-speaker-link"
+                        >
+                            Valeria Sánchez
+                        </a>
+
+                        · Sala Creatividad
+
+                    </p>
+
+                    <button
+                        class="agenda-add-button"
+                        type="button"
+                        data-conference="valeria"
+                    >
+                        + Agregar a mi agenda
+                    </button>
+
+                </div>
+
+                <div class="program-number">
+                    06
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- REGISTRO CTA -->
+
+        <section class="registration">
+
+            <div class="registration-content">
+
+                <div class="registration-text">
+
+                    <p class="section-label">
+                        REGISTRO
+                    </p>
+
+                    <h2>
+                        Forma parte del congreso.
+                    </h2>
+
+                    <p>
+                        Regístrate y vive tres días de conocimiento,
+                        innovación y nuevas ideas.
+                    </p>
+
+                </div>
+
+
+                <div class="registration-action">
+
+                    <a
+                        href="registro.html"
+                        class="hero-boton registration-link"
+                    >
+                        Registrarme
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <h2>
+                    CONOCIMIENTO
+                </h2>
+
+                <p>
+                    Congreso Nacional de Conocimiento
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+
+                    <p class="footer-title">
+                        NAVEGACIÓN
+                    </p>
+
+                    <a href="index.html">
+                        Inicio
+                    </a>
+
+                    <a href="programa.html">
+                        Programa
+                    </a>
+
+                    <a href="ponentes.html">
+                        Ponentes
+                    </a>
+
+                    <a href="agenda.html">
+                        Mi agenda
+                        <span class="agenda-count">0</span>
+                    </a>
+
+                    <a href="registro.html" class="boton-registro">
+                        Registro
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <p class="footer-title">
+                        INFORMACIÓN
+                    </p>
+
+                    <a href="#">
+                        Contacto
+                    </a>
+
+                    <a href="#">
+                        Preguntas frecuentes
+                    </a>
+
+                    <a href="#">
+                        Aviso de privacidad
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Congreso Nacional de Conocimiento
+            </p>
+
+            <p>
+                León, Guanajuato
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

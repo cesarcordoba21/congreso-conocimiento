@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro | Congreso de Conocimiento</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+
+        <div class="logo">
+            CONOCIMIENTO
+        </div>
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menú"
+        >
+            ☰
+        </button>
+
+        <div class="menu">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="programa.html">
+                Programa
+            </a>
+
+            <a href="ponentes.html">
+                Ponentes
+            </a>
+
+            <a href="agenda.html">
+                Mi agenda
+                <span class="agenda-count">0</span>
+            </a>
+
+            <a
+                href="registro.html"
+                class="boton-registro active"
+            >
+                Registro
+            </a>
+
+        </div>
+
+    </nav>
+</header>
+
+
+<main>
+
+    <section class="page-hero">
+
+        <p class="section-label">
+            CONGRESO 2026
+        </p>
+
+        <h1>
+            Forma parte<br>
+            del conocimiento.
+        </h1>
+
+    </section>
+
+
+    <section class="registration registration-page">
+
+        <div class="registration-content">
+
+            <div class="registration-text">
+
+                <p class="section-label">
+                    REGISTRO
+                </p>
+
+                <h2>
+                    Reserva<br>
+                    tu lugar.
+                </h2>
+
+                <p>
+                    Completa tus datos para generar tu pase
+                    personal al Congreso Nacional de Conocimiento 2026.
+                </p>
+
+                <p>
+                    10 — 12 Septiembre 2026<br>
+                    León, Guanajuato
+                </p>
+
+            </div>
+
+
+            <form
+                class="registration-form"
+                id="registration-form"
+            >
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Nombre completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Tu nombre"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="correo@ejemplo.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="organization">
+                        Empresa / Universidad
+                    </label>
+
+                    <input
+                        type="text"
+                        id="organization"
+                        placeholder="Nombre de la organización"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="position">
+                        Cargo / Carrera
+                    </label>
+
+                    <input
+                        type="text"
+                        id="position"
+                        placeholder="Tu cargo o carrera"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="registration-button"
+                >
+                    Completar registro
+                </button>
+
+
+                <p
+                    class="form-message"
+                    id="form-message"
+                ></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+
+            <h2>
+                CONOCIMIENTO
+            </h2>
+
+            <p>
+                Congreso Nacional de Conocimiento
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <div>
+
+                <p class="footer-title">
+                    NAVEGACIÓN
+                </p>
+
+                <a href="index.html">Inicio</a>
+                <a href="programa.html">Programa</a>
+                <a href="ponentes.html">Ponentes</a>
+                <a href="agenda.html">Mi agenda</a>
+                <a href="registro.html">Registro</a>
+                <a href="pase.html">Mi pase</a>
+
+            </div>
+
+            <div>
+
+                <p class="footer-title">
+                    INFORMACIÓN
+                </p>
+
+                <a href="#">Contacto</a>
+                <a href="#">Preguntas frecuentes</a>
+                <a href="#">Aviso de privacidad</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Congreso Nacional de Conocimiento
+        </p>
+
+        <p>
+            León, Guanajuato
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -13,7 +13,10 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -21,417 +24,637 @@
 
 <body>
 
+    <!-- HEADER -->
+
     <header>
 
         <nav>
 
-    <div class="logo">
-        CONOCIMIENTO
-    </div>
+            <div class="logo">
+                CONOCIMIENTO
+            </div>
 
-    <button class="menu-toggle">
-        ☰
-    </button>
+            <button class="menu-toggle">
+                ☰
+            </button>
 
-    <div class="menu">
+            <div class="menu">
 
-        <a href="#inicio">Inicio</a>
-        <a href="#programa">Programa</a>
-        <a href="#ponentes">Ponentes</a>
-        <a href="#registro" class="boton-registro">Registro</a>
+                <a href="#inicio" class="active">
+                    Inicio
+                </a>
 
-    </div>
+                <a href="programa.html">
+                    Programa
+                </a>
 
-</nav>
+                <a href="ponentes.html">
+                    Ponentes
+                </a>
+
+                <a href="agenda.html">
+                    Mi agenda
+                    <span class="agenda-count">0</span>
+                </a>
+
+                <a href="registro.html" class="boton-registro">
+                    Registro
+                </a>
+
+            </div>
+
+        </nav>
 
     </header>
 
 
     <main>
 
-    
 
-    <section class="hero" id="inicio">
+        <!-- HERO -->
 
-        <div class="hero-contenido">
+        <section class="hero" id="inicio">
 
-            <p class="hero-fecha">
-                15 — 17 OCTUBRE 2026
+            <div class="hero-contenido">
+
+                <p class="hero-fecha">
+                    15 — 17 OCTUBRE 2026
+                </p>
+
+                <h1>
+                    Congreso Nacional<br>
+                    de Conocimiento
+                </h1>
+
+                <p class="hero-description">
+                    Ideas que transforman el futuro.
+                </p>
+
+                <a href="programa.html" class="hero-boton">
+                    Conoce el programa
+                </a>
+
+            </div>
+
+            <p class="hero-ubicacion">
+                LEÓN, GUANAJUATO
             </p>
 
-            <h1>
-                Congreso Nacional<br>
-                de Conocimiento
-            </h1>
+        </section>
 
-            <p class="hero-description">
-                Ideas que transforman el futuro.
+
+
+        <!-- SOBRE EL CONGRESO -->
+
+        <section class="sobre reveal">
+
+            <p class="sobre-etiqueta">
+                SOBRE EL CONGRESO
             </p>
 
-            <a href="#programa" class="hero-boton">
-                Conoce el programa
+            <div class="sobre-contenido">
+
+                <h2>
+                    Donde las ideas<br>
+                    se convierten en<br>
+                    posibilidades.
+                </h2>
+
+                <div class="sobre-texto">
+
+                    <p>
+                        Un encuentro diseñado para reunir personas
+                        curiosas, expertos y líderes que quieren
+                        compartir conocimiento y construir el futuro.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="estadisticas">
+
+                <div class="estadistica">
+
+                    <span>
+                        30+
+                    </span>
+
+                    <p>
+                        Conferencias
+                    </p>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <span>
+                        15+
+                    </span>
+
+                    <p>
+                        Ponentes
+                    </p>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <span>
+                        3
+                    </span>
+
+                    <p>
+                        Días
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PONENTES -->
+
+        <section class="speakers reveal">
+
+            <div class="speakers-header">
+
+                <div>
+
+                    <p class="section-label">
+                        PONENTES
+                    </p>
+
+                    <h2>
+                        Conoce a quienes<br>
+                        compartirán sus ideas.
+                    </h2>
+
+                </div>
+
+
+                <a href="ponentes.html" class="speakers-link">
+                    Ver todos los ponentes →
+                </a>
+
+            </div>
+
+
+            <div class="speakers-grid">
+
+
+                <!-- PONENTE 1 -->
+
+                <article class="speaker-card">
+
+                    <div class="speaker-image">
+
+                        <img
+                            src="images/speaker-1.jpg"
+                            alt="Daniel Torres"
+                        >
+
+                    </div>
+
+                    <div class="speaker-info">
+
+                        <h3>
+                            Daniel Torres
+                        </h3>
+
+                        <p>
+                            Innovación y Tecnología
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PONENTE 2 -->
+
+                <article class="speaker-card">
+
+                    <div class="speaker-image">
+
+                        <img
+                            src="images/speaker-2.jpg"
+                            alt="Sofía Ramírez"
+                        >
+
+                    </div>
+
+                    <div class="speaker-info">
+
+                        <h3>
+                            Sofía Ramírez
+                        </h3>
+
+                        <p>
+                            Inteligencia Artificial
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PONENTE 3 -->
+
+                <article class="speaker-card">
+
+                    <div class="speaker-image">
+
+                        <img
+                            src="images/speaker-3.jpg"
+                            alt="Andrea Vega"
+                        >
+
+                    </div>
+
+                    <div class="speaker-info">
+
+                        <h3>
+                            Andrea Vega
+                        </h3>
+
+                        <p>
+                            Emprendimiento
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROGRAMA -->
+
+        <section class="program reveal">
+
+            <div class="program-header">
+
+                <p class="section-label">
+                    PROGRAMA
+                </p>
+
+                <h2>
+                    Tres días para<br>
+                    aprender y conectar.
+                </h2>
+
+            </div>
+
+
+            <div class="program-filters">
+
+                <button
+                    class="filter-button active"
+                    data-day="all"
+                >
+                    Todos
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-day="day-1"
+                >
+                    Día 1
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-day="day-2"
+                >
+                    Día 2
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-day="day-3"
+                >
+                    Día 3
+                </button>
+
+            </div>
+
+
+            <div class="program-list">
+
+
+                <!-- CONFERENCIA 1 -->
+
+                <article
+                    class="program-item"
+                    data-day="day-1"
+                >
+
+                    <div class="program-time">
+                        09:00
+                    </div>
+
+                    <div class="program-info">
+
+                        <h3>
+                            Inteligencia Artificial y el futuro
+                        </h3>
+
+                        <p>
+                            Laura Martínez · Auditorio Principal
+                        </p>
+
+                    </div>
+
+                    <div class="program-number">
+                        01
+                    </div>
+
+                </article>
+
+
+
+                <!-- CONFERENCIA 2 -->
+
+                <article
+                    class="program-item"
+                    data-day="day-1"
+                >
+
+                    <div class="program-time">
+                        11:30
+                    </div>
+
+                    <div class="program-info">
+
+                        <h3>
+                            Innovación que transforma industrias
+                        </h3>
+
+                        <p>
+                            Daniel Torres · Sala Innovación
+                        </p>
+
+                    </div>
+
+                    <div class="program-number">
+                        02
+                    </div>
+
+                </article>
+
+
+
+                <!-- CONFERENCIA 3 -->
+
+                <article
+                    class="program-item"
+                    data-day="day-2"
+                >
+
+                    <div class="program-time">
+                        10:00
+                    </div>
+
+                    <div class="program-info">
+
+                        <h3>
+                            El conocimiento como ventaja competitiva
+                        </h3>
+
+                        <p>
+                            Sofía Ramírez · Auditorio Principal
+                        </p>
+
+                    </div>
+
+                    <div class="program-number">
+                        03
+                    </div>
+
+                </article>
+
+
+
+                <!-- CONFERENCIA 4 -->
+
+                <article
+                    class="program-item"
+                    data-day="day-2"
+                >
+
+                    <div class="program-time">
+                        13:00
+                    </div>
+
+                    <div class="program-info">
+
+                        <h3>
+                            Construyendo empresas del futuro
+                        </h3>
+
+                        <p>
+                            Andrea Vega · Sala Emprendimiento
+                        </p>
+
+                    </div>
+
+                    <div class="program-number">
+                        04
+                    </div>
+
+                </article>
+
+
+
+                <!-- CONFERENCIA 5 -->
+
+                <article
+                    class="program-item"
+                    data-day="day-3"
+                >
+
+                    <div class="program-time">
+                        11:00
+                    </div>
+
+                    <div class="program-info">
+
+                        <h3>
+                            Ideas que cambian el mundo
+                        </h3>
+
+                        <p>
+                            Mariana López · Auditorio Principal
+                        </p>
+
+                    </div>
+
+                    <div class="program-number">
+                        05
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <a href="programa.html" class="speakers-link program-link">
+                Ver programa completo →
             </a>
 
+        </section>
+
+
+
+        <!-- REGISTRO -->
+
+        <section class="registration reveal">
+
+            <div class="registration-content">
+
+
+                <div class="registration-text">
+
+                    <p class="section-label">
+                        REGISTRO
+                    </p>
+
+                    <h2>
+                        ¿Listo para<br>
+                        ser parte?
+                    </h2>
+
+                    <p>
+                        Reserva tu lugar en el Congreso Nacional de Conocimiento
+                        y forma parte de una experiencia diseñada para aprender,
+                        conectar y compartir ideas.
+                    </p>
+
+                </div>
+
+
+                <div class="registration-action">
+
+                    <a
+                        href="registro.html"
+                        class="registration-button registration-link"
+                    >
+                        Registrarme
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-top">
+
+
+            <div class="footer-brand">
+
+                <h2>
+                    CONOCIMIENTO
+                </h2>
+
+                <p>
+                    Congreso Nacional de Conocimiento
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+
+                <div>
+
+                    <p class="footer-title">
+                        NAVEGACIÓN
+                    </p>
+
+                    <a href="#inicio">
+                        Inicio
+                    </a>
+
+                    <a href="programa.html">
+                        Programa
+                    </a>
+
+                    <a href="ponentes.html">
+                        Ponentes
+                    </a>
+
+                    <a href="registro.html">
+                        Registro
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <p class="footer-title">
+                        INFORMACIÓN
+                    </p>
+
+                    <a href="#">
+                        Contacto
+                    </a>
+
+                    <a href="#">
+                        Preguntas frecuentes
+                    </a>
+
+                    <a href="#">
+                        Aviso de privacidad
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <p class="hero-ubicacion">
-            LEÓN, GUANAJUATO
-        </p>
 
-    </section>
-
-    <section class="sobre reveal">
-
-    <p class="sobre-etiqueta">
-        SOBRE EL CONGRESO
-    </p>
-
-    <div class="sobre-contenido">
-
-        <h2>
-            Donde las ideas<br>
-            se convierten en<br>
-            posibilidades.
-        </h2>
-
-        <div class="sobre-texto">
+        <div class="footer-bottom">
 
             <p>
-                Un encuentro diseñado para reunir personas
-                curiosas, expertos y líderes que quieren
-                compartir conocimiento y construir el futuro.
+                © 2026 Congreso Nacional de Conocimiento
             </p>
-
-        </div>
-
-    </div>
-
-    <div class="estadisticas">
-
-        <div class="estadistica">
-            <span>30+</span>
-            <p>Conferencias</p>
-        </div>
-
-        <div class="estadistica">
-            <span>15+</span>
-            <p>Ponentes</p>
-        </div>
-
-        <div class="estadistica">
-            <span>3</span>
-            <p>Días</p>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="speakers reveal" id="ponentes">
-
-    <div class="speakers-header">
-
-        <div class="speakers-grid">
-
-    <article class="speaker-card">
-
-        <div class="speaker-image">
-            <img src="images/speaker-1.jpg" alt="Ponente">
-        </div>
-
-        <div class="speaker-info">
-            <h3>Daniel Torres</h3>
-            <p>Innovación y Tecnología</p>
-        </div>
-
-    </article>
-
-    <article class="speaker-card">
-
-        <div class="speaker-image">
-            <img src="images/speaker-2.jpg" alt="Ponente">
-        </div>
-
-        <div class="speaker-info">
-            <h3>Sofía Ramírez</h3>
-            <p>Inteligencia Artificial</p>
-        </div>
-
-    </article>
-
-    <article class="speaker-card">
-
-        <div class="speaker-image">
-            <img src="images/speaker-3.jpg" alt="Ponente">
-        </div>
-
-        <div class="speaker-info">
-            <h3>Andrea Vega</h3>
-            <p>Emprendimiento</p>
-        </div>
-
-    </article>
-
-</div>
-
-        <div>
-            <p class="section-label">
-                PONENTES
-            </p>
-
-            <h2>
-                Conoce a quienes<br>
-                compartirán sus ideas.
-            </h2>
-        </div>
-
-        <a href="#" class="speakers-link">
-            Ver todos los ponentes →
-        </a>
-
-    </div>
-
-</section>
-
-<section class="program reveal" id="programa">
-
-    <div class="program-header">
-
-        <p class="section-label">
-            PROGRAMA
-        </p>
-
-        <h2>
-            Tres días para<br>
-            aprender y conectar.
-        </h2>
-
-    </div>
-
-    <div class="program-filters">
-
-        <button class="filter-button active" data-day="all">
-            Todos
-        </button>
-
-        <button class="filter-button" data-day="day-1">
-            Día 1
-        </button>
-
-        <button class="filter-button" data-day="day-2">
-            Día 2
-        </button>
-
-        <button class="filter-button" data-day="day-3">
-            Día 3
-        </button>
-
-    </div>
-
-    <div class="program-list">
-
-    <article class="program-item" data-day="day-1">
-
-        <div class="program-time">
-            09:00
-        </div>
-
-        <div class="program-info">
-            <h3>Inteligencia Artificial y el futuro</h3>
-            <p>Laura Martínez · Auditorio Principal</p>
-        </div>
-
-        <div class="program-number">
-            01
-        </div>
-
-    </article>
-
-
-    <article class="program-item" data-day="day-1">
-
-        <div class="program-time">
-            11:30
-        </div>
-
-        <div class="program-info">
-            <h3>Innovación que transforma industrias</h3>
-            <p>Daniel Torres · Sala Innovación</p>
-        </div>
-
-        <div class="program-number">
-            02
-        </div>
-
-    </article>
-
-
-    <article class="program-item" data-day="day-2">
-
-        <div class="program-time">
-            10:00
-        </div>
-
-        <div class="program-info">
-            <h3>El conocimiento como ventaja competitiva</h3>
-            <p>Sofía Ramírez · Auditorio Principal</p>
-        </div>
-
-        <div class="program-number">
-            03
-        </div>
-
-    </article>
-
-
-    <article class="program-item" data-day="day-2">
-
-        <div class="program-time">
-            13:00
-        </div>
-
-        <div class="program-info">
-            <h3>Construyendo empresas del futuro</h3>
-            <p>Andrea Vega · Sala Emprendimiento</p>
-        </div>
-
-        <div class="program-number">
-            04
-        </div>
-
-    </article>
-
-
-    <article class="program-item" data-day="day-3">
-
-        <div class="program-time">
-            11:00
-        </div>
-
-        <div class="program-info">
-            <h3>Ideas que cambian el mundo</h3>
-            <p>Mariana López · Auditorio Principal</p>
-        </div>
-
-        <div class="program-number">
-            05
-        </div>
-
-    </article>
-
-</div>
-
-</section>
-
-<section class="registration reveal" id="registro">
-
-    <div class="registration-content">
-
-        <div class="registration-text">
-
-            <p class="section-label">
-                REGISTRO
-            </p>
-
-            <h2>
-                ¿Listo para<br>
-                ser parte?
-            </h2>
 
             <p>
-                Reserva tu lugar en el Congreso Nacional de Conocimiento
-                y forma parte de una experiencia diseñada para aprender,
-                conectar y compartir ideas.
+                León, Guanajuato
             </p>
 
         </div>
 
-        <form class="registration-form" id="registration-form">
+    </footer>
 
-            <div class="form-group">
-                <label for="name">Nombre completo</label>
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Tu nombre"
-                >
-            </div>
-
-            <div class="form-group">
-                <label for="email">Correo electrónico</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="correo@ejemplo.com"
-                >
-            </div>
-
-            <button type="submit" class="registration-button">
-                Quiero registrarme
-            </button>
-
-            <p class="form-message" id="form-message"></p>
-
-        </form>
-
-    </div>
-
-</section>
-
-</main>
-
-<footer class="footer">
-
-    <div class="footer-top">
-
-        <div class="footer-brand">
-            <h2>CONOCIMIENTO</h2>
-
-            <p>
-                Congreso Nacional de Conocimiento
-            </p>
-        </div>
-
-        <div class="footer-links">
-
-            <div>
-                <p class="footer-title">NAVEGACIÓN</p>
-
-                <a href="#inicio">Inicio</a>
-                <a href="#programa">Programa</a>
-                <a href="#ponentes">Ponentes</a>
-                <a href="#registro">Registro</a>
-            </div>
-
-            <div>
-                <p class="footer-title">INFORMACIÓN</p>
-
-                <a href="#">Contacto</a>
-                <a href="#">Preguntas frecuentes</a>
-                <a href="#">Aviso de privacidad</a>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Congreso Nacional de Conocimiento
-        </p>
-
-        <p>
-            León, Guanajuato
-        </p>
-
-    </div>
-
-</footer>
 
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
