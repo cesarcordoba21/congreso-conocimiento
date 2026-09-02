@@ -699,12 +699,23 @@
     const promoBox = document.getElementById("promo-box");
     const promoBoxClose = document.getElementById("promo-box-close");
 
-    if (promoBox && promoBoxClose) {
+    if (promoBoxClose && promoBox) {
 
-        promoBoxClose.addEventListener("click", function () {
+        function cerrarPromo(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+
             promoBox.style.display = "none";
-        });
+        }
 
+        promoBoxClose.addEventListener("click", cerrarPromo);
+
+        promoBoxClose.addEventListener(
+            "touchend",
+            cerrarPromo,
+            { passive: false }
+        );
     }
 </script>
 
