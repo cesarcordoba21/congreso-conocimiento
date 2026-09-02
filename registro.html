@@ -2,30 +2,53 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Registro | Congreso de Conocimiento</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>
+        Registro | Congreso de Conocimiento
+    </title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="css/style.css">
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
 </head>
+
 
 <body>
 
+
 <header>
+
     <nav>
 
         <div class="logo">
             CONOCIMIENTO
         </div>
+
 
         <button
             class="menu-toggle"
@@ -34,6 +57,7 @@
         >
             ☰
         </button>
+
 
         <div class="menu">
 
@@ -50,8 +74,13 @@
             </a>
 
             <a href="agenda.html">
+
                 Mi agenda
-                <span class="agenda-count">0</span>
+
+                <span class="agenda-count">
+                    0
+                </span>
+
             </a>
 
             <a
@@ -64,144 +93,361 @@
         </div>
 
     </nav>
+
 </header>
+
 
 
 <main>
 
-    <section class="page-hero">
+
+<section class="page-hero">
+
+    <p class="section-label">
+        CONGRESO 2026
+    </p>
+
+    <h1>
+
+        Forma parte<br>
+
+        del conocimiento.
+
+    </h1>
+
+</section>
+
+
+
+<section
+    class="registration registration-page"
+>
+
+
+<div class="registration-content">
+
+
+    <!-- ==================================
+         INFORMACIÓN
+    =================================== -->
+
+    <div class="registration-text">
 
         <p class="section-label">
-            CONGRESO 2026
+            REGISTRO
         </p>
 
-        <h1>
-            Forma parte<br>
-            del conocimiento.
-        </h1>
+        <h2>
 
-    </section>
+            Reserva<br>
 
+            tu lugar.
 
-    <section class="registration registration-page">
-
-        <div class="registration-content">
-
-            <div class="registration-text">
-
-                <p class="section-label">
-                    REGISTRO
-                </p>
-
-                <h2>
-                    Reserva<br>
-                    tu lugar.
-                </h2>
-
-                <p>
-                    Completa tus datos para generar tu pase
-                    personal al Congreso Nacional de Conocimiento 2026.
-                </p>
-
-                <p>
-                    10 — 12 Septiembre 2026<br>
-                    León, Guanajuato
-                </p>
-
-            </div>
+        </h2>
 
 
-            <form
-                class="registration-form"
-                id="registration-form"
+        <p>
+
+            Completa tus datos para generar
+            tu pase personal al Congreso
+            Nacional de Conocimiento 2026.
+
+        </p>
+
+
+        <p>
+
+            10 — 12 Septiembre 2026
+
+            <br>
+
+            León, Guanajuato
+
+        </p>
+
+    </div>
+
+
+
+    <!-- ==================================
+         FORMULARIO
+    =================================== -->
+
+    <form
+        class="registration-form"
+        id="registration-form"
+    >
+
+
+        <!-- NOMBRE -->
+
+        <div class="form-group">
+
+            <label for="name">
+                Nombre completo
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Tu nombre"
+                autocomplete="name"
+                required
             >
-
-                <div class="form-group">
-
-                    <label for="name">
-                        Nombre completo
-                    </label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        placeholder="Tu nombre"
-                        autocomplete="name"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="email">
-                        Correo electrónico
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="correo@ejemplo.com"
-                        autocomplete="email"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="organization">
-                        Empresa / Universidad
-                    </label>
-
-                    <input
-                        type="text"
-                        id="organization"
-                        placeholder="Nombre de la organización"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="position">
-                        Cargo / Carrera
-                    </label>
-
-                    <input
-                        type="text"
-                        id="position"
-                        placeholder="Tu cargo o carrera"
-                        required
-                    >
-
-                </div>
-
-
-                <button
-                    type="submit"
-                    class="registration-button"
-                >
-                    Completar registro
-                </button>
-
-
-                <p
-                    class="form-message"
-                    id="form-message"
-                ></p>
-
-            </form>
 
         </div>
 
-    </section>
+
+
+        <!-- EMAIL -->
+
+        <div class="form-group">
+
+            <label for="email">
+                Correo electrónico
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="correo@ejemplo.com"
+                autocomplete="email"
+                required
+            >
+
+        </div>
+
+
+
+        <!-- ORGANIZACIÓN -->
+
+        <div class="form-group">
+
+            <label for="organization">
+                Empresa / Universidad
+            </label>
+
+            <input
+                type="text"
+                id="organization"
+                placeholder="Nombre de la organización"
+                required
+            >
+
+        </div>
+
+
+
+        <!-- CARGO -->
+
+        <div class="form-group">
+
+            <label for="position">
+                Cargo / Carrera
+            </label>
+
+            <input
+                type="text"
+                id="position"
+                placeholder="Tu cargo o carrera"
+                required
+            >
+
+        </div>
+
+
+
+        <!-- EDAD -->
+
+        <div class="form-group">
+
+            <label for="age">
+                Edad
+            </label>
+
+            <input
+                type="number"
+                id="age"
+                min="15"
+                max="100"
+                placeholder="Ej. 22"
+                required
+            >
+
+        </div>
+
+
+
+        <!-- CIUDAD -->
+
+        <div class="form-group">
+
+            <label for="city">
+                Ciudad
+            </label>
+
+            <input
+                type="text"
+                id="city"
+                placeholder="Ej. León"
+                required
+            >
+
+        </div>
+
+
+
+        <!-- ESTADO -->
+
+        <div class="form-group">
+
+            <label for="state">
+                Estado
+            </label>
+
+            <input
+                type="text"
+                id="state"
+                placeholder="Ej. Guanajuato"
+                required
+            >
+
+        </div>
+
+
+
+        <!-- TIPO DE ASISTENTE -->
+
+        <div class="form-group">
+
+            <label for="attendee-type">
+                Tipo de asistente
+            </label>
+
+            <select
+                id="attendee-type"
+                required
+            >
+
+                <option value="">
+                    Selecciona una opción
+                </option>
+
+                <option value="Estudiante">
+                    Estudiante
+                </option>
+
+                <option value="Profesionista">
+                    Profesionista
+                </option>
+
+                <option value="Empresario">
+                    Empresario
+                </option>
+
+                <option value="Docente">
+                    Docente
+                </option>
+
+                <option value="Emprendedor">
+                    Emprendedor
+                </option>
+
+                <option value="Otro">
+                    Otro
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- CÓMO SE ENTERÓ -->
+
+        <div class="form-group">
+
+            <label for="source">
+                ¿Cómo te enteraste del evento?
+            </label>
+
+            <select
+                id="source"
+                required
+            >
+
+                <option value="">
+                    Selecciona una opción
+                </option>
+
+                <option value="Instagram">
+                    Instagram
+                </option>
+
+                <option value="Facebook">
+                    Facebook
+                </option>
+
+                <option value="TikTok">
+                    TikTok
+                </option>
+
+                <option value="Universidad">
+                    Universidad
+                </option>
+
+                <option value="Empresa">
+                    Empresa
+                </option>
+
+                <option value="Amigos">
+                    Amigos
+                </option>
+
+                <option value="Publicidad">
+                    Publicidad
+                </option>
+
+                <option value="Otro">
+                    Otro
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- BOTÓN -->
+
+        <button
+            type="submit"
+            class="registration-button"
+        >
+            Completar registro
+        </button>
+
+
+
+        <!-- MENSAJE -->
+
+        <p
+            class="form-message"
+            id="form-message"
+        ></p>
+
+
+    </form>
+
+
+</div>
+
+
+</section>
+
 
 </main>
+
 
 
 <footer class="footer">
@@ -229,14 +475,32 @@
                     NAVEGACIÓN
                 </p>
 
-                <a href="index.html">Inicio</a>
-                <a href="programa.html">Programa</a>
-                <a href="ponentes.html">Ponentes</a>
-                <a href="agenda.html">Mi agenda</a>
-                <a href="registro.html">Registro</a>
-                <a href="pase.html">Mi pase</a>
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <a href="programa.html">
+                    Programa
+                </a>
+
+                <a href="ponentes.html">
+                    Ponentes
+                </a>
+
+                <a href="agenda.html">
+                    Mi agenda
+                </a>
+
+                <a href="registro.html">
+                    Registro
+                </a>
+
+                <a href="pase.html">
+                    Mi pase
+                </a>
 
             </div>
+
 
             <div>
 
@@ -244,9 +508,17 @@
                     INFORMACIÓN
                 </p>
 
-                <a href="#">Contacto</a>
-                <a href="#">Preguntas frecuentes</a>
-                <a href="#">Aviso de privacidad</a>
+                <a href="#">
+                    Contacto
+                </a>
+
+                <a href="#">
+                    Preguntas frecuentes
+                </a>
+
+                <a href="#">
+                    Aviso de privacidad
+                </a>
 
             </div>
 
@@ -270,7 +542,33 @@
 </footer>
 
 
-<script src="js/script.js"></script>
+<!-- =====================================
+     SUPABASE
+====================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+></script>
+
+
+<!-- =====================================
+     REGISTRO EN BASE DE DATOS
+====================================== -->
+
+<script
+    src="js/registro-supabase.js"
+></script>
+
+
+<!-- =====================================
+     JAVASCRIPT GENERAL
+====================================== -->
+
+<script
+    src="js/script.js"
+></script>
+
 
 </body>
+
 </html>

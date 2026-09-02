@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Panel Admin | Congreso de Conocimiento
+    </title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER ADMIN
+========================================= -->
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+            CONOCIMIENTO
+        </div>
+
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menú"
+        >
+            ☰
+        </button>
+
+
+        <div class="menu">
+
+            <a href="index.html">
+                Ver sitio
+            </a>
+
+            <button
+                id="admin-logout"
+                class="admin-logout-button"
+                type="button"
+            >
+                Cerrar sesión
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     DASHBOARD
+========================================= -->
+
+<main class="admin-dashboard">
+
+
+    <!-- =====================================
+         ENCABEZADO
+    ====================================== -->
+
+    <section class="admin-header">
+
+        <p class="section-label">
+            PANEL ADMINISTRATIVO
+        </p>
+
+        <h1>
+            Métricas del Congreso
+        </h1>
+
+        <p>
+            Consulta los registros y analiza
+            la información de los asistentes.
+        </p>
+
+        <p
+            class="admin-user"
+            id="admin-user"
+        >
+            Cargando administrador...
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         MÉTRICAS PRINCIPALES
+    ====================================== -->
+
+    <section class="admin-metrics">
+
+
+        <article class="metric-card">
+
+            <span>
+                TOTAL REGISTRADOS
+            </span>
+
+            <strong id="metric-total">
+                0
+            </strong>
+
+            <small>
+                Asistentes registrados
+            </small>
+
+        </article>
+
+
+
+        <article class="metric-card">
+
+            <span>
+                EDAD PROMEDIO
+            </span>
+
+            <strong id="metric-age">
+                —
+            </strong>
+
+            <small>
+                Promedio general
+            </small>
+
+        </article>
+
+
+
+        <article class="metric-card">
+
+            <span>
+                TIPO PRINCIPAL
+            </span>
+
+            <strong id="metric-type">
+                —
+            </strong>
+
+            <small>
+                Perfil más frecuente
+            </small>
+
+        </article>
+
+
+
+        <article class="metric-card">
+
+            <span>
+                CIUDAD PRINCIPAL
+            </span>
+
+            <strong id="metric-city">
+                —
+            </strong>
+
+            <small>
+                Ciudad con más registros
+            </small>
+
+        </article>
+
+
+
+        <article class="metric-card">
+
+            <span>
+                PRINCIPAL FUENTE
+            </span>
+
+            <strong id="metric-source">
+                —
+            </strong>
+
+            <small>
+                Canal con más registros
+            </small>
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         GRÁFICAS
+    ====================================== -->
+
+    <section class="admin-charts-section">
+
+
+        <div class="admin-section-heading">
+
+            <p class="section-label">
+                ANÁLISIS
+            </p>
+
+            <h2>
+                Comportamiento de registros
+            </h2>
+
+        </div>
+
+
+
+        <div class="admin-charts-grid">
+
+
+            <!-- TIPO DE ASISTENTE -->
+
+            <article class="admin-chart-card">
+
+                <div class="chart-card-header">
+
+                    <span>
+                        PERFIL
+                    </span>
+
+                    <h3>
+                        Tipo de asistente
+                    </h3>
+
+                </div>
+
+                <div class="chart-container">
+
+                    <canvas
+                        id="chart-type"
+                    ></canvas>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- FUENTES -->
+
+            <article class="admin-chart-card">
+
+                <div class="chart-card-header">
+
+                    <span>
+                        DIFUSIÓN
+                    </span>
+
+                    <h3>
+                        ¿Cómo conocieron el evento?
+                    </h3>
+
+                </div>
+
+                <div class="chart-container">
+
+                    <canvas
+                        id="chart-source"
+                    ></canvas>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- CIUDADES -->
+
+            <article class="admin-chart-card">
+
+                <div class="chart-card-header">
+
+                    <span>
+                        PROCEDENCIA
+                    </span>
+
+                    <h3>
+                        Principales ciudades
+                    </h3>
+
+                </div>
+
+                <div class="chart-container">
+
+                    <canvas
+                        id="chart-city"
+                    ></canvas>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- REGISTROS POR FECHA -->
+
+            <article class="admin-chart-card">
+
+                <div class="chart-card-header">
+
+                    <span>
+                        CRECIMIENTO
+                    </span>
+
+                    <h3>
+                        Registros por fecha
+                    </h3>
+
+                </div>
+
+                <div class="chart-container">
+
+                    <canvas
+                        id="chart-date"
+                    ></canvas>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         TABLA
+    ====================================== -->
+
+    <section class="admin-table-section">
+
+
+        <div class="admin-table-header">
+
+
+            <div>
+
+                <p class="section-label">
+                    BASE DE DATOS
+                </p>
+
+                <h2>
+                    Asistentes
+                </h2>
+
+                <p id="admin-results-count">
+                    0 registros
+                </p>
+
+            </div>
+
+
+
+            <div class="admin-table-actions">
+
+
+                <input
+                    type="search"
+                    id="admin-search"
+                    placeholder="Buscar asistente..."
+                    autocomplete="off"
+                >
+
+
+                <button
+                    id="export-csv"
+                    type="button"
+                    class="admin-export-button"
+                >
+                    Exportar CSV
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ESTADO -->
+
+        <div
+            class="admin-status"
+            id="admin-status"
+        >
+            Cargando información...
+        </div>
+
+
+
+        <!-- TABLA -->
+
+        <div class="admin-table-wrapper">
+
+            <table class="admin-table">
+
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Nombre
+                        </th>
+
+                        <th>
+                            Email
+                        </th>
+
+                        <th>
+                            Organización
+                        </th>
+
+                        <th>
+                            Cargo / Carrera
+                        </th>
+
+                        <th>
+                            Edad
+                        </th>
+
+                        <th>
+                            Ciudad
+                        </th>
+
+                        <th>
+                            Estado
+                        </th>
+
+                        <th>
+                            Tipo
+                        </th>
+
+                        <th>
+                            Fuente
+                        </th>
+
+                        <th>
+                            Folio
+                        </th>
+
+                        <th>
+                            Fecha
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody
+                    id="admin-table-body"
+                >
+
+                </tbody>
+
+
+            </table>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     CHART.JS
+========================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"
+></script>
+
+
+<!-- =========================================
+     SUPABASE
+========================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+></script>
+
+
+<!-- =========================================
+     ADMIN JS
+========================================= -->
+
+<script
+    src="js/admin.js"
+></script>
+
+
+</body>
+
+</html>
+
+<section class="agenda-metrics-section">
+
+    <h2>Interés en conferencias</h2>
+
+    <div class="metrics-grid">
+
+        <div class="metric-card">
+            <h3>Conferencia más popular</h3>
+            <p id="metric-conference">-</p>
+        </div>
+
+        <div class="metric-card">
+            <h3>Ponente más popular</h3>
+            <p id="metric-speaker">-</p>
+        </div>
+
+        <div class="metric-card">
+            <h3>Promedio por asistente</h3>
+            <p id="metric-agenda-average">0</p>
+        </div>
+
+        <div class="metric-card">
+            <h3>Total de selecciones</h3>
+            <p id="metric-agenda-total">0</p>
+        </div>
+
+        <div class="chart-card">
+
+            <h3>Conferencias más agregadas</h3>
+
+            <canvas id="chart-conferences"></canvas>
+
+        </div>
+
+    </div>
+
+</section>
+

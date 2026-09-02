@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Congreso de Conocimiento</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<main class="admin-login-page">
+
+    <section class="admin-login-card">
+
+        <p class="section-label">
+            ADMINISTRACIÓN
+        </p>
+
+        <h1>
+            Iniciar sesión
+        </h1>
+
+        <p>
+            Accede al panel de métricas del Congreso de Conocimiento.
+        </p>
+
+        <form id="admin-login-form">
+
+            <div class="form-group">
+
+                <label for="admin-email">
+                    Correo
+                </label>
+
+                <input
+                    type="email"
+                    id="admin-email"
+                    required
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="admin-password">
+                    Contraseña
+                </label>
+
+                <input
+                    type="password"
+                    id="admin-password"
+                    required
+                >
+
+            </div>
+
+            <button
+                type="submit"
+                class="registration-button"
+            >
+                Entrar
+            </button>
+
+            <p
+                id="admin-login-message"
+                class="form-message"
+            ></p>
+
+        </form>
+
+    </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/admin-login.js"></script>
+
+</body>
+</html>

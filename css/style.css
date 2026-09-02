@@ -2417,3 +2417,1032 @@ nav {
     }
 
 }
+
+/* =========================================
+   SELECTS DEL FORMULARIO
+========================================= */
+
+.registration-form select {
+    width: 100%;
+
+    padding: 16px 0;
+
+    border: none;
+    border-bottom: 1px solid #bdbdbd;
+
+    background: transparent;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    color: #111;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+.registration-form select:focus {
+    border-bottom-color: #111;
+}
+
+
+/* =========================================
+   BOTÓN DESACTIVADO
+========================================= */
+
+.registration-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   MENSAJE DEL REGISTRO
+========================================= */
+
+.form-message {
+    min-height: 22px;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+/* =========================================
+   ADMIN LOGIN
+========================================= */
+
+.admin-login-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    background: #f3f3f3;
+}
+
+.admin-login-card {
+    width: 100%;
+    max-width: 500px;
+
+    background: #ffffff;
+
+    padding: 50px;
+
+    border: 1px solid #ddd;
+}
+
+.admin-login-card h1 {
+    font-size: 48px;
+
+    margin-bottom: 15px;
+}
+
+.admin-login-card form {
+    margin-top: 35px;
+}
+
+
+/* =========================================
+   ADMIN DASHBOARD
+========================================= */
+
+.admin-dashboard {
+    padding: 70px 5%;
+}
+
+.admin-header {
+    margin-bottom: 50px;
+}
+
+.admin-header h1 {
+    font-size: clamp(
+        42px,
+        6vw,
+        80px
+    );
+
+    line-height: 0.95;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   MÉTRICAS
+========================================= */
+
+.admin-metrics {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            5,
+            minmax(0, 1fr)
+        );
+
+    gap: 16px;
+
+    margin-bottom: 70px;
+}
+
+.metric-card {
+    padding: 25px;
+
+    border: 1px solid #ddd;
+
+    background: #fff;
+}
+
+.metric-card span {
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.metric-card strong {
+    display: block;
+
+    font-size: 30px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   TABLA ADMIN
+========================================= */
+
+.admin-table-section {
+    margin-top: 40px;
+}
+
+.admin-table-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+}
+
+.admin-table-header h2 {
+    font-size: 42px;
+}
+
+.admin-table-actions {
+    display: flex;
+
+    gap: 15px;
+}
+
+.admin-table-actions input {
+    min-width: 250px;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    font-family: inherit;
+}
+
+.admin-table-wrapper {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: #fff;
+
+    font-size: 13px;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 14px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #ddd;
+
+    white-space: nowrap;
+}
+
+.admin-table th {
+    background: #111;
+
+    color: #fff;
+
+    font-size: 11px;
+
+    letter-spacing: 0.5px;
+}
+
+.admin-table tbody tr:hover {
+    background: #f5f5f5;
+}
+
+
+/* =========================================
+   RESPONSIVE ADMIN
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .admin-metrics {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .admin-dashboard {
+        padding:
+            40px 20px;
+    }
+
+    .admin-metrics {
+        grid-template-columns:
+            1fr;
+    }
+
+    .admin-table-header {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .admin-table-actions {
+        flex-direction: column;
+    }
+
+    .admin-table-actions input {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .admin-login-card {
+        padding: 30px 20px;
+    }
+
+    .admin-login-card h1 {
+        font-size: 38px;
+    }
+
+}
+
+/* =========================================
+   ADMIN DASHBOARD V2
+========================================= */
+
+.admin-dashboard {
+    width: 100%;
+
+    padding: 70px 5% 100px;
+
+    background: #f5f5f3;
+}
+
+
+
+/* =========================================
+   HEADER ADMIN
+========================================= */
+
+.admin-header {
+    max-width: 900px;
+
+    margin-bottom: 55px;
+}
+
+
+.admin-header h1 {
+    margin: 10px 0 20px;
+
+    font-size: clamp(
+        44px,
+        6vw,
+        82px
+    );
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+}
+
+
+.admin-header > p:not(.section-label):not(.admin-user) {
+    max-width: 600px;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color: #5d5d5d;
+}
+
+
+.admin-user {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 8px 12px;
+
+    background: #e8e8e5;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+}
+
+
+
+/* =========================================
+   BOTÓN LOGOUT
+========================================= */
+
+.admin-logout-button {
+    padding: 12px 18px;
+
+    border: 0;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-family: inherit;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.admin-logout-button:hover {
+    background: #dedede;
+}
+
+
+
+/* =========================================
+   MÉTRICAS
+========================================= */
+
+.admin-metrics {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            5,
+            minmax(0, 1fr)
+        );
+
+    gap: 14px;
+
+    margin-bottom: 90px;
+}
+
+
+.metric-card {
+    min-width: 0;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #ddddda;
+}
+
+
+.metric-card span {
+    display: block;
+
+    margin-bottom: 22px;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.metric-card strong {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: clamp(
+        24px,
+        2.2vw,
+        36px
+    );
+
+    line-height: 1;
+
+    word-break: break-word;
+}
+
+
+.metric-card small {
+    color: #777777;
+
+    font-size: 11px;
+}
+
+
+
+/* =========================================
+   SECCIÓN GRÁFICAS
+========================================= */
+
+.admin-charts-section {
+    margin-bottom: 100px;
+}
+
+
+.admin-section-heading {
+    margin-bottom: 35px;
+}
+
+
+.admin-section-heading h2 {
+    margin-top: 8px;
+
+    font-size: clamp(
+        34px,
+        4vw,
+        52px
+    );
+
+    letter-spacing: -2px;
+}
+
+
+
+/* =========================================
+   GRID GRÁFICAS
+========================================= */
+
+.admin-charts-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 20px;
+}
+
+
+.admin-chart-card {
+    min-width: 0;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #ddddda;
+}
+
+
+.chart-card-header {
+    margin-bottom: 25px;
+}
+
+
+.chart-card-header span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.chart-card-header h3 {
+    font-size: 22px;
+
+    line-height: 1.2;
+}
+
+
+.chart-container {
+    position: relative;
+
+    width: 100%;
+
+    height: 330px;
+}
+
+
+
+/* =========================================
+   TABLA
+========================================= */
+
+.admin-table-section {
+    width: 100%;
+}
+
+
+.admin-table-header {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+
+.admin-table-header h2 {
+    margin: 7px 0;
+
+    font-size: clamp(
+        36px,
+        4vw,
+        54px
+    );
+
+    letter-spacing: -2px;
+}
+
+
+.admin-table-header > div:first-child > p:last-child {
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+
+/* =========================================
+   ACCIONES TABLA
+========================================= */
+
+.admin-table-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.admin-table-actions input {
+    width: 280px;
+
+    padding: 14px 16px;
+
+    border: 1px solid #cfcfcb;
+
+    background: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+.admin-table-actions input:focus {
+    border-color: #111111;
+}
+
+
+.admin-export-button {
+    padding: 15px 20px;
+
+    border: 1px solid #111111;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+
+.admin-export-button:hover {
+    background: #333333;
+}
+
+
+
+/* =========================================
+   ESTADO
+========================================= */
+
+.admin-status {
+    margin-bottom: 20px;
+
+    padding: 15px 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #ddddda;
+
+    font-size: 13px;
+}
+
+
+.admin-status-error {
+    border-color: #b80000;
+
+    color: #b80000;
+}
+
+
+
+/* =========================================
+   WRAPPER TABLA
+========================================= */
+
+.admin-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 1px solid #ddddda;
+
+    background: #ffffff;
+}
+
+
+
+/* =========================================
+   TABLA
+========================================= */
+
+.admin-table {
+    width: 100%;
+
+    min-width: 1450px;
+
+    border-collapse: collapse;
+
+    background: #ffffff;
+}
+
+
+.admin-table thead {
+    background: #111111;
+
+    color: #ffffff;
+}
+
+
+.admin-table th {
+    padding: 16px;
+
+    text-align: left;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+.admin-table td {
+    padding: 16px;
+
+    border-bottom: 1px solid #eeeeeb;
+
+    font-size: 12px;
+
+    color: #333333;
+
+    white-space: nowrap;
+}
+
+
+.admin-table tbody tr {
+    transition: 0.15s ease;
+}
+
+
+.admin-table tbody tr:hover {
+    background: #f6f6f3;
+}
+
+
+.admin-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+
+
+/* =========================================
+   ETIQUETAS
+========================================= */
+
+.admin-tag {
+    display: inline-block;
+
+    padding: 6px 9px;
+
+    background: #eeeeeb;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+.admin-folio {
+    font-family: monospace;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+
+/* =========================================
+   TABLA VACÍA
+========================================= */
+
+.admin-empty-table {
+    padding: 45px !important;
+
+    text-align: center !important;
+
+    color: #777777 !important;
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .admin-metrics {
+        grid-template-columns:
+            repeat(
+                3,
+                minmax(0, 1fr)
+            );
+    }
+
+}
+
+
+
+/* =========================================
+   TABLET PEQUEÑA
+========================================= */
+
+@media (max-width: 900px) {
+
+    .admin-dashboard {
+        padding:
+            50px 30px 80px;
+    }
+
+
+    .admin-metrics {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .admin-charts-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .admin-table-header {
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+    }
+
+
+    .admin-table-actions {
+        width: 100%;
+    }
+
+
+    .admin-table-actions input {
+        flex: 1;
+
+        width: auto;
+    }
+
+}
+
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .admin-dashboard {
+        padding:
+            40px 18px 70px;
+    }
+
+
+    .admin-header h1 {
+        letter-spacing:
+            -2px;
+    }
+
+
+    .admin-metrics {
+        grid-template-columns:
+            1fr;
+
+        gap: 10px;
+
+        margin-bottom: 65px;
+    }
+
+
+    .metric-card {
+        padding: 22px;
+    }
+
+
+    .admin-chart-card {
+        padding: 20px;
+    }
+
+
+    .chart-container {
+        height: 280px;
+    }
+
+
+    .admin-table-actions {
+        flex-direction:
+            column;
+    }
+
+
+    .admin-table-actions input,
+    .admin-export-button {
+        width: 100%;
+    }
+
+}
+
+/* ==========================================
+   ADMIN - TAMAÑO DE GRÁFICAS
+   ========================================== */
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+
+/* TARJETA DE CADA GRÁFICA */
+
+.chart-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    width: 100%;
+    height: 380px;
+
+    min-width: 0;
+    min-height: 0;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* TÍTULO DE LA GRÁFICA */
+
+.chart-card h3 {
+    margin: 0 0 20px;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+
+/* CONTROLAR TAMAÑO DE CHART.JS */
+
+.chart-card canvas {
+    display: block;
+
+    width: 100% !important;
+    height: 300px !important;
+
+    max-width: 100% !important;
+    max-height: 300px !important;
+}
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 1100px) {
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ==========================================
+   CELULAR
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 20px;
+    }
+
+    .chart-card {
+        height: 330px;
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .chart-card h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .chart-card canvas {
+        height: 260px !important;
+        max-height: 260px !important;
+    }
+
+}
