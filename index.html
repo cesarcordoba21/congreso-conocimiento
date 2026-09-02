@@ -24,6 +24,38 @@
 
 <body>
 
+    <!-- =========================================
+     ANUNCIO CONOCE MÁS
+========================================= -->
+
+<a
+    href="https://github.com/cesarcordoba21#congreso-nacional-de-conocimiento"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="promo-conoce-mas"
+    aria-label="Conoce más sobre el proyecto"
+>
+
+    <button
+        class="promo-close"
+        type="button"
+        aria-label="Cerrar anuncio"
+    >
+        ×
+    </button>
+
+    <img
+        src="images/conoce-mas.png"
+        alt="Conoce más sobre la página"
+    >
+
+    <div class="promo-text">
+        <span>CONOCE MÁS</span>
+        <small>Haz clic para ver el proyecto →</small>
+    </div>
+
+</a>
+
     <!-- HEADER -->
 
     <header>
@@ -654,6 +686,24 @@
 
 
     <script src="js/script.js"></script>
+
+    <script>
+    const promoAd = document.querySelector(".promo-conoce-mas");
+    const promoClose = document.querySelector(".promo-close");
+
+    if (promoAd && promoClose) {
+
+        promoClose.addEventListener("click", function(event) {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            promoAd.style.display = "none";
+
+        });
+
+    }
+</script>
 
 </body>
 
