@@ -28,33 +28,41 @@
      ANUNCIO CONOCE MÁS
 ========================================= -->
 
-<a
-    href="https://github.com/cesarcordoba21#congreso-nacional-de-conocimiento"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="promo-conoce-mas"
-    aria-label="Conoce más sobre el proyecto"
->
+<!-- =========================================
+     ANUNCIO CONOCE MÁS
+========================================= -->
+
+<div class="promo-box" id="promo-box">
 
     <button
-        class="promo-close"
+        class="promo-box-close"
+        id="promo-box-close"
         type="button"
         aria-label="Cerrar anuncio"
     >
         ×
     </button>
 
-    <img
-        src="images/conoce-mas.png"
-        alt="Conoce más sobre la página"
+    <a
+        href="https://github.com/cesarcordoba21#congreso-nacional-de-conocimiento"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="promo-box-link"
     >
 
-    <div class="promo-text">
-        <span>CONOCE MÁS</span>
-        <small>Haz clic para ver el proyecto →</small>
-    </div>
+        <img
+            src="images/conoce-mas.png"
+            alt="Conoce más sobre la página"
+        >
 
-</a>
+        <div class="promo-box-text">
+            <strong>CONOCE MÁS</strong>
+            <span>Haz clic para ver el proyecto →</span>
+        </div>
+
+    </a>
+
+</div>
 
     <!-- HEADER -->
 
@@ -688,18 +696,13 @@
     <script src="js/script.js"></script>
 
     <script>
-    const promoAd = document.querySelector(".promo-conoce-mas");
-    const promoClose = document.querySelector(".promo-close");
+    const promoBox = document.getElementById("promo-box");
+    const promoBoxClose = document.getElementById("promo-box-close");
 
-    if (promoAd && promoClose) {
+    if (promoBox && promoBoxClose) {
 
-        promoClose.addEventListener("click", function(event) {
-
-            event.preventDefault();
-            event.stopPropagation();
-
-            promoAd.style.display = "none";
-
+        promoBoxClose.addEventListener("click", function () {
+            promoBox.style.display = "none";
         });
 
     }
