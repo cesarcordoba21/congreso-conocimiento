@@ -3828,611 +3828,141 @@ nav {
 
 }
 
-/* =========================================
-   ANUNCIO - CONOCE MÁS
-========================================= */
-
-.promo-conoce-mas {
-    position: fixed;
-
-    right: 25px;
-    bottom: 25px;
-
-    width: 230px;
-
-    background: #ffffff;
-
-    border-radius: 16px;
-
-    overflow: visible;
-
-    box-shadow:
-        0 15px 45px
-        rgba(0, 0, 0, 0.35);
-
-    text-decoration: none;
-
-    z-index: 9999;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-
-/* IMAGEN */
-
-.promo-conoce-mas img {
-    display: block;
-
-    width: 100%;
-    height: 220px;
-
-    object-fit: cover;
-    object-position: top center;
-
-    border-radius:
-        16px 16px 0 0;
-}
-
-
-/* TEXTO INFERIOR */
-
-.promo-text {
-    padding: 13px 15px 15px;
-
-    background: #ffffff;
-
-    border-radius:
-        0 0 16px 16px;
-}
-
-
-.promo-text span {
-    display: block;
-
-    color: #111111;
-
-    font-size: 15px;
-    font-weight: 800;
-
-    letter-spacing: 0.5px;
-}
-
-
-.promo-text small {
-    display: block;
-
-    margin-top: 4px;
-
-    color: #666666;
-
-    font-size: 12px;
-}
-
-
-/* HOVER */
-
-.promo-conoce-mas:hover {
-    transform:
-        translateY(-6px);
-
-    box-shadow:
-        0 20px 55px
-        rgba(0, 0, 0, 0.45);
-}
-
-
-/* =========================================
-   BOTÓN CERRAR
-========================================= */
-
-.promo-close {
-    position: absolute;
-
-    top: -10px;
-    right: -10px;
-
-    width: 30px;
-    height: 30px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 0;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background: #111111;
-
-    color: #ffffff;
-
-    font-size: 20px;
-    line-height: 1;
-
-    cursor: pointer;
-
-    z-index: 2;
-
-    box-shadow:
-        0 4px 12px
-        rgba(0, 0, 0, 0.3);
-}
-
-
-/* =========================================
-   CELULAR
-========================================= */
-
-@media (max-width: 768px) {
-
-    .promo-conoce-mas {
-        right: 15px;
-        bottom: 15px;
-
-        width: 155px;
-
-        border-radius: 12px;
-    }
-
-
-    .promo-conoce-mas img {
-        height: 145px;
-
-        border-radius:
-            12px 12px 0 0;
-    }
-
-
-    .promo-text {
-        padding:
-            9px 10px 11px;
-
-        border-radius:
-            0 0 12px 12px;
-    }
-
-
-    .promo-text span {
-        font-size: 12px;
-    }
-
-
-    .promo-text small {
-        font-size: 10px;
-    }
-
-
-    .promo-close {
-        width: 27px;
-        height: 27px;
-
-        top: -9px;
-        right: -9px;
-
-        font-size: 18px;
-    }
-
-}
-
 /* =====================================================
-   FIX ANUNCIO EN TELÉFONO
-   ===================================================== */
-
-@media screen and (max-width: 768px) {
-
-    a.promo-conoce-mas {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-
-        position: fixed !important;
-
-        /* Posición */
-        top: 140px !important;
-        right: 12px !important;
-        bottom: auto !important;
-        left: auto !important;
-
-        /* Tamaño */
-        width: 120px !important;
-        height: auto !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-
-        background: #ffffff !important;
-
-        border-radius: 10px !important;
-
-        overflow: visible !important;
-
-        z-index: 999999 !important;
-
-        box-shadow:
-            0 8px 25px
-            rgba(0, 0, 0, 0.35) !important;
-
-        text-decoration: none !important;
-    }
-
-
-    a.promo-conoce-mas img {
-        display: block !important;
-
-        width: 120px !important;
-        height: 120px !important;
-
-        max-width: none !important;
-
-        object-fit: cover !important;
-        object-position: top center !important;
-
-        margin: 0 !important;
-
-        border-radius:
-            10px 10px 0 0 !important;
-    }
-
-
-    a.promo-conoce-mas .promo-text {
-        display: block !important;
-
-        width: 100% !important;
-
-        padding: 7px 8px !important;
-
-        box-sizing: border-box !important;
-
-        background: #ffffff !important;
-
-        border-radius:
-            0 0 10px 10px !important;
-    }
-
-
-    a.promo-conoce-mas .promo-text span {
-        display: block !important;
-
-        color: #111111 !important;
-
-        font-size: 10px !important;
-        font-weight: 800 !important;
-    }
-
-
-    a.promo-conoce-mas .promo-text small {
-        display: block !important;
-
-        margin-top: 2px !important;
-
-        color: #666666 !important;
-
-        font-size: 8px !important;
-    }
-
-
-    a.promo-conoce-mas .promo-close {
-        display: flex !important;
-
-        position: absolute !important;
-
-        top: -9px !important;
-        right: -7px !important;
-
-        width: 24px !important;
-        height: 24px !important;
-
-        align-items: center !important;
-        justify-content: center !important;
-
-        padding: 0 !important;
-
-        border: 2px solid #ffffff !important;
-        border-radius: 50% !important;
-
-        background: #111111 !important;
-        color: #ffffff !important;
-
-        font-size: 15px !important;
-
-        z-index: 1000000 !important;
-    }
-
-}
-
-/* =====================================================
-   ANUNCIO CONOCE MÁS - VERSIÓN LIMPIA
-   ===================================================== */
+   ANUNCIO CONOCE MÁS
+   Una sola versión, sin reglas duplicadas.
+   La X ocupa su propia fila para evitar que el enlace
+   intercepte el toque en iPhone/Safari.
+===================================================== */
 
 .promo-box {
-    display: block;
-
     position: fixed;
-
-    top: 150px;
-    right: 25px;
-
-    width: 165px;
-
+    top: 130px;
+    right: 20px;
+    width: 150px;
     margin: 0;
     padding: 0;
-
     background: #ffffff;
-
     border-radius: 12px;
-
-    box-shadow:
-        0 10px 35px
-        rgba(0, 0, 0, 0.35);
-
-    z-index: 999999;
-
-    overflow: visible;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.30);
+    overflow: hidden;
+    z-index: 10000;
 }
 
+.promo-box-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    min-height: 28px;
+    padding: 3px 4px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.promo-box-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #111111;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    touch-action: manipulation;
+}
+
+.promo-box-close:focus-visible {
+    outline: 2px solid #111111;
+    outline-offset: 2px;
+}
 
 .promo-box-link {
     display: block;
-
     width: 100%;
-
     color: #111111;
-
     text-decoration: none;
-
-    border-radius: 12px;
-
-    overflow: hidden;
 }
-
 
 .promo-box-link img {
     display: block;
-
     width: 100%;
-    height: 150px;
-
+    height: 125px;
     object-fit: cover;
     object-position: center top;
 }
 
-
 .promo-box-text {
     display: block;
-
-    padding: 9px 10px 11px;
-
+    padding: 8px 10px 10px;
     background: #ffffff;
-
     color: #111111;
 }
-
 
 .promo-box-text strong {
     display: block;
-
-    margin-bottom: 3px;
-
+    margin: 0 0 3px;
     color: #111111;
-
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 800;
+    line-height: 1.2;
 }
-
 
 .promo-box-text span {
     display: block;
-
+    margin: 0;
     color: #666666;
-
-    font-size: 9px;
+    font-size: 8px;
+    line-height: 1.35;
 }
-
-
-/* X */
-
-.promo-box-close {
-    display: flex;
-
-    position: absolute;
-
-    top: -9px;
-    right: -9px;
-
-    width: 25px;
-    height: 25px;
-
-    padding: 0;
-
-    align-items: center;
-    justify-content: center;
-
-    background: #111111;
-
-    color: #ffffff;
-
-    border: 2px solid #ffffff;
-    border-radius: 50%;
-
-    font-size: 16px;
-    line-height: 1;
-
-    cursor: pointer;
-
-    z-index: 1000000;
-
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-
-/* =====================================================
-   TELÉFONO
-   ===================================================== */
 
 @media screen and (max-width: 768px) {
-
     .promo-box {
-        display: block !important;
-
-        position: fixed !important;
-
-        /* Aquí controlamos qué tan arriba aparece */
-        top: 110px !important;
-
-        right: 12px !important;
-
-        bottom: auto !important;
-        left: auto !important;
-
-        /* Pequeño en celular */
-        width: 115px !important;
-
-        height: auto !important;
-
-        margin: 0 !important;
-
-        visibility: visible !important;
-
-        opacity: 1 !important;
-
-        transform: none !important;
-
-        z-index: 2147483647 !important;
+        top: 92px;
+        right: 10px;
+        width: 108px;
+        border-radius: 10px;
+        z-index: 10000;
     }
 
-
-    .promo-box-link {
-        display: block !important;
-
-        width: 100% !important;
-
-        visibility: visible !important;
-
-        opacity: 1 !important;
+    .promo-box-header {
+        min-height: 26px;
+        padding: 2px 3px;
     }
 
+    .promo-box-close {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        min-height: 30px;
+        font-size: 20px;
+    }
 
     .promo-box-link img {
-        display: block !important;
-
-        width: 115px !important;
-        height: 110px !important;
-
-        max-width: none !important;
-
-        object-fit: cover !important;
-        object-position: center top !important;
-
-        visibility: visible !important;
-
-        opacity: 1 !important;
+        height: 96px;
     }
-
 
     .promo-box-text {
-        display: block !important;
-
-        padding: 7px 8px !important;
-
-        background: #ffffff !important;
+        padding: 6px 7px 7px;
     }
-
 
     .promo-box-text strong {
-        color: #111111 !important;
-
-        font-size: 9px !important;
+        font-size: 8px;
     }
-
 
     .promo-box-text span {
-        color: #666666 !important;
-
-        font-size: 7px !important;
+        font-size: 7px;
     }
-
-
-    .promo-box-close {
-        display: flex !important;
-
-        width: 23px !important;
-        height: 23px !important;
-
-        top: -8px !important;
-        right: -7px !important;
-
-        font-size: 14px !important;
-
-        z-index: 2147483647 !important;
-    }
-
-}
-
-/* FIX X DEL ANUNCIO EN IPHONE */
-
-.promo-box {
-    isolation: isolate !important;
-}
-
-.promo-box-link {
-    position: relative !important;
-    z-index: 1 !important;
-}
-
-.promo-box-close {
-    position: absolute !important;
-
-    top: -10px !important;
-    right: -10px !important;
-
-    width: 32px !important;
-    height: 32px !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    padding: 0 !important;
-    margin: 0 !important;
-
-    border: 2px solid white !important;
-    border-radius: 50% !important;
-
-    background: #111 !important;
-    color: white !important;
-
-    font-size: 20px !important;
-
-    z-index: 999999999 !important;
-
-    cursor: pointer !important;
-
-    pointer-events: auto !important;
-
-    touch-action: manipulation !important;
-
-    -webkit-appearance: none !important;
-    appearance: none !important;
-}
-
-@media screen and (max-width: 768px) {
-
-    .promo-box-close {
-        width: 30px !important;
-        height: 30px !important;
-
-        top: -10px !important;
-        right: -8px !important;
-
-        font-size: 19px !important;
-
-        z-index: 2147483647 !important;
-    }
-
 }

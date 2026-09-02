@@ -28,28 +28,26 @@
      ANUNCIO CONOCE MÁS
 ========================================= -->
 
-<!-- =========================================
-     ANUNCIO CONOCE MÁS
-========================================= -->
-
 <div class="promo-box" id="promo-box">
-
-    <button
-        class="promo-box-close"
-        id="promo-box-close"
-        type="button"
-        aria-label="Cerrar anuncio"
-    >
-        ×
-    </button>
+    <div class="promo-box-header">
+        <button
+            class="promo-box-close"
+            id="promo-box-close"
+            type="button"
+            aria-label="Cerrar anuncio"
+            onclick="document.getElementById('promo-box')?.remove();"
+        >
+            ×
+        </button>
+    </div>
 
     <a
         href="https://github.com/cesarcordoba21#congreso-nacional-de-conocimiento"
         target="_blank"
         rel="noopener noreferrer"
         class="promo-box-link"
+        aria-label="Conoce más sobre el proyecto Congreso Nacional de Conocimiento"
     >
-
         <img
             src="images/conoce-mas.png"
             alt="Conoce más sobre la página"
@@ -59,9 +57,7 @@
             <strong>CONOCE MÁS</strong>
             <span>Haz clic para ver el proyecto →</span>
         </div>
-
     </a>
-
 </div>
 
     <!-- HEADER -->
@@ -694,31 +690,6 @@
 
 
     <script src="js/script.js"></script>
-
-    <script>
-    const promoBox = document.getElementById("promo-box");
-    const promoBoxClose = document.getElementById("promo-box-close");
-
-    if (promoBoxClose && promoBox) {
-
-        function cerrarPromo(event) {
-            event.preventDefault();
-            event.stopPropagation();
-            event.stopImmediatePropagation();
-
-            promoBox.style.display = "none";
-        }
-
-        promoBoxClose.addEventListener("click", cerrarPromo);
-
-        promoBoxClose.addEventListener(
-            "touchend",
-            cerrarPromo,
-            { passive: false }
-        );
-    }
-</script>
-
 </body>
 
 </html>
